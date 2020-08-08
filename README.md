@@ -68,7 +68,6 @@ gulp-scss-starter
 
 ### Шрифты
 * шрифты находятся в папке ```src/fonts```
-    * используйте [форматы](https://caniuse.com/#search=woff) ```.woff``` и ```.woff2```
     * шрифты подключаются в файл ```src/styles/base/_fonts.scss```
 
 ### Изображения
