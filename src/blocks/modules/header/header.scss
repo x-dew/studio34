@@ -1,0 +1,205 @@
+@import "../../../styles/helpers/_variables.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    background: $bg-dark;
+    .navbar {
+        padding: 0;
+    }
+    .navbar-brand {
+        margin-right: 0;
+        padding: 0;
+    }
+    a {
+        color: $menu-color;
+        font-size: 18px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        margin-right: 68px;
+        img {
+            height: 44.03px;
+        }
+    }
+    .logo-text {
+        margin-left: 18px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.443em;
+        color: $logo-text-color;
+    }
+    .personal-area {
+        margin-left: 70px;
+        img {
+            height: 25px;
+        }
+    }
+    .main-menu__items {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 25px 15px 30px 15px;
+}
+
+@media screen and(max-width: 1510px) and (min-width: 991px) {
+    .header {
+        .logo {
+            margin-right: 30px;
+        }
+        .personal-area {
+            margin-left: 30px;
+        }
+    }
+}
+
+@media screen and(max-width: 1433px) and (min-width: 991px) {
+    .header .main-menu__items .main-menu__link {
+        font-size: 16px;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media screen and(max-width: 1327px) and (min-width: 991px) {
+    .header .main-menu__items .main-menu__link {
+        line-height: 18px;
+    }
+}
+
+@media screen and(max-width: 1125px) and (min-width: 991px) {
+    .header {
+        .logo-text {
+            margin-left: 15px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .logo {
+            margin-right: 20px;
+            img {
+                height: 40px;
+            }
+        }
+        .personal-area {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1068px) and (min-width: 991px) {
+    .header {
+        .logo img {
+            height: 35px;
+        }
+        .logo-text {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.3em;
+        }
+        .main-menu__items .main-menu__link {
+            font-size: 16px;
+            padding-right: 6px;
+            padding-left: 6px;
+        }
+    }
+}
+
+@media screen and(min-width: 992px) {
+    .header {
+        .logo {
+            order: 0;
+        }
+        .main-menu {
+            order: 1;
+        }
+        .header__group {
+            order: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        .header-container {
+            padding: 20px 15px 20px 15px;
+        }
+        .main-menu {
+            margin-top: 30px;
+        }
+        .personal-area {
+            margin-left: 0;
+        }
+        .header__group {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-toggler {
+            padding: 0;
+            outline: none;
+        }
+        .menu-toggler {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 422px) {
+    .header .logo {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .header {
+        .logo img {
+            height: 40px;
+        }
+        .logo-text {
+            margin-left: 15px;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.4em;
+        }
+        .menu-toggler {
+            margin-left: 18px;
+        }
+        .logo {
+            margin-right: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .header {
+        .logo {
+            margin-right: 20px;
+            img {
+                height: 35px;
+            }
+        }
+        .logo-text {
+            margin-left: 12px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .personal-area img {
+            height: 22px;
+        }
+        .menu-toggler {
+            margin-left: 15px;
+        }
+        .main-menu {
+            margin-top: 25px;
+        }
+    }
+}
