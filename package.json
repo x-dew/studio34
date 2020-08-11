@@ -71,7 +71,9 @@
     "dependencies": {
         "bootstrap": "^4.5.2",
         "jquery": "^3.5.1",
-        "popper.js": "^1.16.1"
+        "popper.js": "^1.16.1",
+        "sharp": "^0.25.4",
+        "swiper": "^5.4.3"
     },
     "husky": {
         "hooks": {
