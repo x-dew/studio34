@@ -2401,7 +2401,7 @@ template {
 
 @font-face {
   font-family: "Jost";
-  src: url("../../fonts/Jost-Light.ttf") format("truetype");
+  src: url("../fonts/Jost-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
@@ -2720,7 +2720,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2788,7 +2788,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2805,7 +2805,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2856,7 +2856,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
