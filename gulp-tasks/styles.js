@@ -49,7 +49,7 @@ gulp.task("styles", () => {
         })))
         .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write("./maps/")))
-        .pipe(gulp.dest(paths.styles.dist))
+        .pipe(gulp.dest(paths.styles.docs))
         .pipe(debug({
             "title": "CSS files"
         }))

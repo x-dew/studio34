@@ -47,7 +47,7 @@ gulp.task("images", () => {
                 ]
             })
         ])))
-        .pipe(gulp.dest(paths.images.dist))
+        .pipe(gulp.dest(paths.images.docs))
         .pipe(debug({
             "title": "Images"
         }))

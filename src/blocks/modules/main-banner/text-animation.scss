@@ -1,0 +1,108 @@
+.main-banner__animation-wrap {
+    position: relative;
+    max-width: 1335px;
+    margin: 1em auto;
+    transform-style: preserve-3d;
+    perspective: 400px;
+    text-align: right;
+}
+.animation-letter.animation-letter-gray {
+    color: rgba(255, 255, 255, 0.42);
+}
+.animation-letter {
+    color: #000000;
+}
+.animation-letter, .animation-space {
+    font-family: "TrolaLatCyr", sans-serif;
+    display: inline-block;
+    font-size: 240px;
+    text-transform: uppercase;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.animation-space {
+    width: .3em;
+}
+$letter-position: (
+    1: translate3d(1111px, 62px, 0),
+    2: translate3d(1300px, -450px, 0),
+    3: translate3d(300px, -530px, 0),
+    4: translate3d(-548px, 261px, 0),
+    5: translate3d(-700px, -100px, 0),
+    6: translate3d(650px, 200px, 0),
+    7: translate3d(0, 0, 0),
+    8: translate3d(-500px, 35px, 0),
+    9: translate3d(-500px, 35px, 0),
+);
+@for $i from 1 through 9 {
+    $n: 1;
+    $r: random(10);
+    @if($r > 5) {
+        $n: -1;
+    }
+    $d: 360 * $n +deg;
+    @keyframes anim#{$i} {
+        0% {
+            transform: map-get($letter-position, $i) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate($d);
+            opacity: 1;
+        }
+    }
+    .animation-letter:nth-child(#{$i}) {
+        animation: anim#{$i} 3s;
+        animation-delay: -$i * .1s;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .main-banner__animation-wrap {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .animation-letter, .animation-space {
+        font-size: 185px;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .animation-letter, .animation-space {
+        font-size: 150px;
+    }
+}
+@media screen and (max-width: 790px) {
+    .animation-letter, .animation-space {
+        font-size: 120px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .animation-letter, .animation-space {
+        font-size: 90px;
+    }
+    .main-banner__animation-wrap {
+        margin: 2.8em auto 1em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .animation-letter, .animation-space {
+        font-size: 70px;
+    }
+    .main-banner__animation-wrap {
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 405px) {
+    .animation-letter, .animation-space {
+        font-size: 55px;
+    }
+    .main-banner__animation-wrap {
+        margin: 1.8em auto 0;
+    }
+}
+@media screen and (max-width: 335px) {
+    .animation-letter, .animation-space {
+        font-size: 50px;
+    }
+}

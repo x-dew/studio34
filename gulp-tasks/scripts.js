@@ -23,7 +23,7 @@ gulp.task("scripts", () => {
         .pipe(gulpif(production, rename({
             suffix: ".min"
         })))
-        .pipe(gulp.dest(paths.scripts.dist))
+        .pipe(gulp.dest(paths.scripts.docs))
         .pipe(debug({
             "title": "JS files"
         }))

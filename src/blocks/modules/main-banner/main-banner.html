@@ -13,43 +13,58 @@
                 <span class="play-btn" data-toggle="modal" data-target="#videoModal">
                     <img src="img/sprites/sprite.svg#play-btn">
                 </span>
-                <!-- Modal -->
-                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                        <div class="video-modal-content">
-                            <div>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-video">
-                                <iframe width="560" height="500" src="https://www.youtube.com/embed/OXuIqaeg0SI" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal -->
             </div>
         </div>
     </div>
-    <div class="main-banner__slider">
-        <div class="main-banner__slider-container">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                    <div class="swiper-slide">Slide 10</div>
+    <div class="main-banner__animation">
+        <div class="main-banner__animation-wrap">
+            <span class="animation-letter">S</span>
+            <span class="animation-letter">T</span>
+            <span class="animation-letter">U</span>
+            <span class="animation-letter">D</span>
+            <span class="animation-letter">I</span>
+            <span class="animation-letter">O</span>
+            <span class="animation-space"></span>
+            <span class="animation-letter animation-letter-gray">3</span>
+            <span class="animation-letter animation-letter-gray">4</span>
+        </div>
+    </div>
+    <div class="main-banner__cards">
+        <div class="main-banner__cards-container">
+            <div class="main-banner__card">
+                <h3>Какой-то раздел</h3>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </p>
+                <div class="main-banner__card__link">
+                    <a href="#">
+                        <img src="img/sprites/sprite.svg#arrow-right">
+                    </a>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+            </div>
+            <div class="main-banner__card">
+                <h3>Какой-то раздел</h3>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </p>
+                <div class="main-banner__card__link">
+                    <a href="#">
+                        <img src="img/sprites/sprite.svg#arrow-right">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg s-modal" role="document">
+            <div class="video-modal-content">
+                <div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-video">
+                    <iframe width="560" height="400" src="https://www.youtube.com/embed/OXuIqaeg0SI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
 </section>

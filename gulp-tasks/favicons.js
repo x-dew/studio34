@@ -20,7 +20,7 @@ gulp.task("favicons", () => {
                 coast: false
             }
         }))
-        .pipe(gulp.dest(paths.favicons.dist))
+        .pipe(gulp.dest(paths.favicons.docs))
         .pipe(debug({
             "title": "Favicons"
         }));

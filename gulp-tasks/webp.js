@@ -19,7 +19,7 @@ gulp.task("webp", () => {
             quality: 100,
             alphaQuality: 100
         }))))
-        .pipe(gulp.dest(paths.webp.dist))
+        .pipe(gulp.dest(paths.webp.docs))
         .pipe(debug({
             "title": "Images"
         }))

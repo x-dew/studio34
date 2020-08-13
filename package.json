@@ -1,12 +1,11 @@
 {
-    "name": "gulp-scss-starter",
-    "description": "Frontend development with pleasure",
-    "author": "Andrey Gorokhov",
+    "name": "studio34",
+    "description": "studio34",
+    "author": "studio34",
     "repository": {
         "type": "git",
-        "url": "https://github.com/andreyalexeich/gulp-scss-starter.git"
+        "url": "https://github.com/itop55/studio34"
     },
-    "license": "MIT",
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
