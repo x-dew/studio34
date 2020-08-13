@@ -2543,7 +2543,7 @@ body {
   z-index: 1;
   width: 100%;
   height: 892px;
-  background: url(../../../img/banner-bg.jpg) no-repeat;
+  background: url(../img/banner-bg.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -2662,7 +2662,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
-  color: #3E3E3E;
+  color: #3e3e3e;
   margin-top: 22px;
   padding-left: 50px;
 }
@@ -2701,7 +2701,7 @@ body {
 
 .animation-letter,
 .animation-space {
-  font-family: 'rolaLatCyr', sans-serif;
+  font-family: "TrolaLatCyr", sans-serif;
   display: inline-block;
   font-size: 240px;
   text-transform: uppercase;
@@ -2720,7 +2720,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2754,7 +2754,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2771,7 +2771,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2856,7 +2856,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
