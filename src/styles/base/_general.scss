@@ -2,34 +2,38 @@ html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 }
-
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
-
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
-
+body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+}
 .container {
-    max-width: 1400px;
+    max-width: 1430px;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
-
+.s-full-height {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 .s-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
-
-.s-col {
+.s-col-2 {
     flex: 0 0 50%;
     max-width: 50%;
     position: relative;
@@ -37,24 +41,23 @@ h1, h2, h3, h4, h5, h6, ul {
     padding-right: 15px;
     padding-left: 15px;
 }
-
+.s-col-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .s-lg-inline-block {
     display: inline-block;
 }
 .s-dm-inline-block {
-    display: none;
+    display: none!important;
 }
-
-
-body {
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-}
-
 .ws-no-wrap {
     white-space: nowrap;
 }
-
 .s-btn {
     font-weight: 500;
     font-size: 18px;
@@ -69,7 +72,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.055em;
 }
-
 .section-title {
     position: relative;
     font-weight: 400;
@@ -77,6 +79,8 @@ body {
     line-height: 25px;
     color: #605F6C;
     text-transform: uppercase;
+    margin-bottom: 40px;
+    display: inline-block;
     &::before {
         content: '';
         position: absolute;
@@ -86,6 +90,11 @@ body {
         border-bottom: 1px solid #605F6C;
     }
 }
+.section-desc-title {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 40px;
+}
 
 
 @media screen and (max-width: 991px) {
@@ -94,10 +103,10 @@ body {
         max-width: 100%;
     }
     .s-dm-inline-block {
-        display: inline-block;
+        display: inline-block!important;
     }
     .s-lg-inline-block {
-        display: none;
+        display: none!important;
     }
 }
 
@@ -119,6 +128,16 @@ body {
     }
 }
 
+@media screen and (max-width: 440px) {
+    .section-desc-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and (max-width: 345px) {
     .s-btn {
         font-size: 13px;
@@ -129,5 +148,11 @@ body {
         &::before {
             top: calc(100% + 3px);
         }
+    }
+    .section-desc-title {
+        font-size: 24px;
+    }
+    .section-title {
+        margin-bottom: 20px;
     }
 }

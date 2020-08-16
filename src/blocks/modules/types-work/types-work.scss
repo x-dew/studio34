@@ -1,0 +1,201 @@
+.types-work {
+    background: #e5e5e5;
+    padding-top: 186px;
+    padding-bottom: 195px;
+}
+.types-work__title {
+    h3 {
+        color: #000000;
+    }
+}
+.types-work__card-number {
+    text-align: right;
+    span {
+        font-weight: 300;
+        font-size: 90px;
+        color: #383e42;
+        width: 98px;
+        line-height: normal;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: tb-rl;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+}
+.types-work__card-title {
+    margin-top: 18px;
+    h3 {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 32px;
+        text-align: right;
+        color: #000000;
+    }
+}
+.types-work__card-desc {
+    p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #3e3e3e;
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+}
+.types-work__card-img {
+    margin-top: 18px;
+    img {
+        width: 100%;
+    }
+}
+.types-work__cards {
+    margin-top: 90px;
+}
+.types-work__card {
+    padding-right: 15px;
+    padding-left: 15px;
+    &:nth-child(odd) {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+    .types-work__card-number span {
+        font-size: 70px;
+        width: 78px;
+    }
+    .types-work__card-title {
+        margin-top: 8px;
+        h3 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    .types-work__card-img {
+        margin-top: 10px;
+    }
+    .types-work__card-desc p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 15px;
+    }
+    .types-work__card:nth-child(odd) {
+        margin-top: 90px;
+    }
+    .types-work__cards {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .types-work__card-number span {
+        font-size: 55px;
+        width: 60px;
+    }
+    .types-work__card-title h3 {
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .types-work__card {
+        padding-right: 15px;
+        padding-left: 15px;
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-top: 40px;
+        &:nth-child(odd) {
+            margin-top: 40px;
+        }
+    }
+    .types-work__card-number span {
+        height: 127px;
+    }
+    .types-work__cards {
+        margin-top: 20px;
+    }
+    .types-work {
+        padding-top: 115px;
+        padding-bottom: 115px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .types-work__card-number span {
+        font-size: 65px;
+        width: 76px;
+        height: 95px;
+    }
+    .types-work__card-title {
+        margin-top: 10px;
+        h3 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    .types-work__card-desc p {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .types-work__card {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    .types-work__card-header {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        span {
+            width: auto;
+            height: auto;
+            line-height: unset;
+            -webkit-writing-mode: unset;
+            -ms-writing-mode: unset;
+            writing-mode: unset;
+            -webkit-transform: unset;
+            transform: unset;
+        }
+    }
+    .types-work__card-title {
+        display: flex;
+        flex-grow: 1;
+        align-items: flex-end;
+        h3 {
+            text-align: left;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .types-work {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .types-work__card-desc p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .types-work__card-desc p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .types-work__card-title h3 {
+        font-size: 22px;
+    }
+    .types-work__card-number span {
+        font-size: 50px;
+        height: auto;
+    }
+    .types-work__cards {
+        margin-top: 0;
+    }
+}

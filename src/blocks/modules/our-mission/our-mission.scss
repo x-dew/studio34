@@ -1,20 +1,15 @@
 .our-mission {
-    padding-top: 103px;
+    padding-top: 115px;
+    padding-bottom: 115px;
     background-color: #000000;
+    border-bottom: 1px solid #cca94b;
 }
 .our-mission__group {
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
-}
-.our-mission__desc {
-    margin-top: 20px;
 }
 .our-mission__title {
     h3 {
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 40px;
         color: #e6c789;
     }
 }
@@ -68,15 +63,9 @@
     .our-mission__desc {
         margin-top: 40px;
     }
-    .our-mission__title {
-        margin-top: 35px;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    .our-mission {
-        padding-top: 70px;
-    }
     .our-mission__img img {
         max-height: 100%;
     }
@@ -84,7 +73,8 @@
 
 @media screen and (max-width: 440px) {
     .our-mission {
-        padding-top: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .our-mission__desc {
         margin-top: 25px;
@@ -96,25 +86,12 @@
             margin-bottom: 20px;
         }
     }
-    .our-mission__title h3 {
-        font-size: 26px;
-        line-height: 30px;
-    }
     .our-mission__link {
         margin-top: 30px;
     }
 }
 
 @media screen and (max-width: 345px) {
-    .our-mission {
-        padding-top: 30px;
-    }
-    .our-mission__title h3 {
-        font-size: 24px;
-    }
-    .our-mission__title {
-        margin-top: 25px;
-    }
     .our-mission__desc-vn {
         margin-top: 15px;
         p {
