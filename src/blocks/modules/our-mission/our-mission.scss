@@ -1,0 +1,136 @@
+.our-mission {
+    padding-top: 103px;
+    background-color: #000000;
+}
+.our-mission__group {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.our-mission__desc {
+    margin-top: 20px;
+}
+.our-mission__title {
+    h3 {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 40px;
+        color: #e6c789;
+    }
+}
+.our-mission__desc-vn {
+    width: 100%;
+    max-width: 565px;
+    margin-top: 30px;
+    p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #adadba;
+        margin-bottom: 30px;
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.our-mission__link {
+    margin-top: 40px;
+    a {
+        position: relative;
+        font-size: 18px;
+        line-height: 25px;
+        color: #e6c783;
+        &::after {
+            content: url(../img/sprites/sprite.svg#arrow-right-gold);
+            display: inline-block;
+            position: absolute;
+            top: 3px;
+            right: -33px;
+            width: 21px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.our-mission__img {
+    img {
+        width: 100%;
+        max-height: 430px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .our-mission__group {
+        flex-direction: column-reverse;
+    }
+    .our-mission__desc-vn {
+        max-width: 100%;
+    }
+    .our-mission__desc {
+        margin-top: 40px;
+    }
+    .our-mission__title {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-mission {
+        padding-top: 70px;
+    }
+    .our-mission__img img {
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .our-mission {
+        padding-top: 40px;
+    }
+    .our-mission__desc {
+        margin-top: 25px;
+    }
+    .our-mission__desc-vn {
+        margin-top: 20px;
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    .our-mission__title h3 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .our-mission__link {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .our-mission {
+        padding-top: 30px;
+    }
+    .our-mission__title h3 {
+        font-size: 24px;
+    }
+    .our-mission__title {
+        margin-top: 25px;
+    }
+    .our-mission__desc-vn {
+        margin-top: 15px;
+        p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 23px;
+        }
+    }
+    .our-mission__link {
+        margin-top: 25px;
+        a {
+            font-size: 16px;
+            &::after {
+                right: -25px;
+                width: 18px;
+            }
+        }
+    }
+}

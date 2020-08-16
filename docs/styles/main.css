@@ -2427,6 +2427,17 @@ template {
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -2439,11 +2450,35 @@ ul {
 }
 
 .container {
-  max-width: 1430px;
+  max-width: 1400px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.s-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.s-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.s-lg-inline-block {
+  display: inline-block;
+}
+
+.s-dm-inline-block {
+  display: none;
 }
 
 body {
@@ -2468,6 +2503,24 @@ body {
   padding: 25px 54px 23px 54px;
   text-transform: uppercase;
   letter-spacing: 0.055em;
+}
+
+.section-title {
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #605F6C;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: -5000px;
+  border-bottom: 1px solid #605F6C;
 }
 
 .header {
@@ -2642,7 +2695,8 @@ body {
   justify-content: flex-end;
   position: relative;
   z-index: 2;
-  margin-top: 76px;
+  max-width: 1920px;
+  margin: 76px auto 0;
 }
 
 .main-banner__card {
@@ -2720,7 +2774,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2737,7 +2791,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2754,7 +2808,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2771,7 +2825,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2805,7 +2859,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2822,7 +2876,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2839,7 +2893,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2864,6 +2918,72 @@ body {
 .animation-letter:nth-child(9) {
   animation: anim9 3s;
   animation-delay: -0.9s;
+}
+
+.our-mission {
+  padding-top: 103px;
+  background-color: #000000;
+}
+
+.our-mission__group {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.our-mission__desc {
+  margin-top: 20px;
+}
+
+.our-mission__title h3 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 40px;
+  color: #E6C783;
+}
+
+.our-mission__desc-vn {
+  width: 100%;
+  max-width: 565px;
+  margin-top: 30px;
+}
+
+.our-mission__desc-vn p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #ADADBA;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.our-mission__desc-vn p:last-child {
+  margin-bottom: 0;
+}
+
+.our-mission__link {
+  margin-top: 40px;
+}
+
+.our-mission__link a {
+  position: relative;
+  font-size: 18px;
+  line-height: 25px;
+  color: #E6C783;
+}
+
+.our-mission__link a::after {
+  content: url(../img/sprites/sprite.svg#arrow-right-gold);
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: -33px;
+  width: 21px;
+  background-repeat: no-repeat;
+}
+
+.our-mission__img img {
+  width: 100%;
+  max-height: 430px;
 }
 
 @media (min-width: 576px) {
@@ -5674,6 +5794,19 @@ body {
 }
 
 @media screen and (max-width: 991px) {
+  .s-col-full {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .s-dm-inline-block {
+    display: inline-block;
+  }
+
+  .s-lg-inline-block {
+    display: none;
+  }
+
   .header .header-container {
     padding: 20px 15px 20px 15px;
   }
@@ -5699,6 +5832,22 @@ body {
   .header .menu-toggler {
     margin-left: 20px;
   }
+
+  .our-mission__group {
+    flex-direction: column-reverse;
+  }
+
+  .our-mission__desc-vn {
+    max-width: 100%;
+  }
+
+  .our-mission__desc {
+    margin-top: 40px;
+  }
+
+  .our-mission__title {
+    margin-top: 35px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -5711,6 +5860,16 @@ body {
   .animation-letter,
   .animation-space {
     font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-mission {
+    padding-top: 70px;
+  }
+
+  .our-mission__img img {
+    max-height: 100%;
   }
 }
 
@@ -5792,6 +5951,10 @@ body {
     padding: 17px 40px 15px 40px;
   }
 
+  .section-title {
+    font-size: 16px;
+  }
+
   .main-banner__play-btn {
     margin-top: 22px;
   }
@@ -5840,6 +6003,34 @@ body {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .our-mission {
+    padding-top: 40px;
+  }
+
+  .our-mission__desc {
+    margin-top: 25px;
+  }
+
+  .our-mission__desc-vn {
+    margin-top: 20px;
+  }
+
+  .our-mission__desc-vn p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .our-mission__title h3 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .our-mission__link {
+    margin-top: 30px;
+  }
+}
+
 @media screen and (max-width: 422px) {
   .header .logo {
     margin-right: 30px;
@@ -5882,6 +6073,14 @@ body {
   .s-btn {
     font-size: 13px;
     padding: 15px 30px 13px 30px;
+  }
+
+  .section-title {
+    font-size: 14px;
+  }
+
+  .section-title::before {
+    top: calc(100% + 3px);
   }
 
   .header .logo {
@@ -5932,6 +6131,41 @@ body {
 
   .main-banner__cards-container {
     padding-bottom: 30px;
+  }
+
+  .our-mission {
+    padding-top: 30px;
+  }
+
+  .our-mission__title h3 {
+    font-size: 24px;
+  }
+
+  .our-mission__title {
+    margin-top: 25px;
+  }
+
+  .our-mission__desc-vn {
+    margin-top: 15px;
+  }
+
+  .our-mission__desc-vn p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 23px;
+  }
+
+  .our-mission__link {
+    margin-top: 25px;
+  }
+
+  .our-mission__link a {
+    font-size: 16px;
+  }
+
+  .our-mission__link a::after {
+    right: -25px;
+    width: 18px;
   }
 }
 

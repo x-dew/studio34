@@ -1,15 +1,50 @@
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 1430px;
+    max-width: 1400px;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 }
+
+.s-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.s-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.s-lg-inline-block {
+    display: inline-block;
+}
+.s-dm-inline-block {
+    display: none;
+}
+
 
 body {
     font-family: 'Jost', sans-serif;
@@ -35,6 +70,37 @@ body {
     letter-spacing: 0.055em;
 }
 
+.section-title {
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #605F6C;
+    text-transform: uppercase;
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        left: -5000px;
+        border-bottom: 1px solid #605F6C;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .s-col-full {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .s-dm-inline-block {
+        display: inline-block;
+    }
+    .s-lg-inline-block {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .s-btn {
         font-size: 15px;
@@ -48,11 +114,20 @@ body {
         font-size: 14px;
         padding: 17px 40px 15px 40px;
     }
+    .section-title {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 345px) {
     .s-btn {
         font-size: 13px;
         padding: 15px 30px 13px 30px;
+    }
+    .section-title {
+        font-size: 14px;
+        &::before {
+            top: calc(100% + 3px);
+        }
     }
 }

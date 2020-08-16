@@ -96,7 +96,8 @@
     justify-content: flex-end;
     position: relative;
     z-index: 2;
-    margin-top: 76px;
+    max-width: 1920px;
+    margin: 76px auto 0;
 }
 .main-banner__card {
     flex: 1;
