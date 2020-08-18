@@ -8,5 +8,7 @@ import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/modal";
 
 // Импортируем другие js-файлы
-import "./import/modules";
+import "../blocks/modules/header/header";
+import "../blocks/modules/our-mission/our-mission";
+import "../blocks/modules/footer/footer";
 import "./swiper-settings";

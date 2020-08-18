@@ -1,8 +1,11 @@
 .our-mission {
     padding-top: 115px;
-    padding-bottom: 115px;
+    padding-bottom: 93px;
     background-color: #000000;
     border-bottom: 1px solid #cca94b;
+}
+.our-mission__container {
+    width: 100%;
 }
 .our-mission__group {
     align-items: center;
@@ -52,6 +55,51 @@
         max-height: 430px;
     }
 }
+.our-mission__scroll-block {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 145px;
+    &:hover {
+        .our-mission__notice {
+            color: #e6c783;
+            transition: 0.5s;
+        }
+        .our-mission__scroll-text {
+            color: #505050;
+            transition: 0.5s;
+        }
+    }
+}
+.our-mission__scroll-lines {
+    overflow: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+.our-mission__scroll-line {
+    width: max-content;
+}
+.our-mission__scroll-text {
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 88px;
+    color: #1e1e1e;
+    transition: 0.5s;
+}
+.our-mission__notice {
+    color: rgba(129, 111, 73, 0.8);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+    .our-mission__scroll-text {
+        font-size: 75px;
+        line-height: 70px;
+    }
+}
 
 @media screen and (max-width: 991px) {
     .our-mission__group {
@@ -68,6 +116,20 @@
 @media screen and (max-width: 768px) {
     .our-mission__img img {
         max-height: 100%;
+    }
+    .our-mission__scroll-text {
+        font-size: 60px;
+        line-height: 55px;
+    }
+    .our-mission__scroll-block {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .our-mission__scroll-text {
+        font-size: 55px;
+        line-height: 50px;
     }
 }
 
@@ -89,6 +151,10 @@
     .our-mission__link {
         margin-top: 30px;
     }
+    .our-mission__scroll-text {
+        font-size: 45px;
+        line-height: 40px;
+    }
 }
 
 @media screen and (max-width: 345px) {
@@ -109,5 +175,12 @@
                 width: 18px;
             }
         }
+    }
+    .our-mission__scroll-text {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    .our-mission__scroll-block {
+        margin-top: 60px;
     }
 }
