@@ -74,13 +74,15 @@ body {
 }
 .section-title {
     position: relative;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    color: #605F6C;
-    text-transform: uppercase;
-    margin-bottom: 40px;
     display: inline-block;
+    margin-bottom: 40px;
+    span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #605F6C;
+        text-transform: uppercase;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -91,9 +93,21 @@ body {
     }
 }
 .section-desc-title {
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 40px;
+    h3 {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 40px;
+    }
+}
+.rotate-text {
+    span {
+        line-height: normal;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: tb-rl;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
 }
 
 
@@ -124,14 +138,23 @@ body {
         padding: 17px 40px 15px 40px;
     }
     .section-title {
-        font-size: 16px;
+        span {
+            font-size: 16px;
+        }
+    }
+    .section-desc-title {
+        h3 {
+            font-size: 30px;
+        }
     }
 }
 
 @media screen and (max-width: 440px) {
     .section-desc-title {
-        font-size: 26px;
-        line-height: 30px;
+        h3 {
+            font-size: 26px;
+            line-height: 30px;
+        }
     }
     .section-title {
         margin-bottom: 30px;
@@ -144,13 +167,17 @@ body {
         padding: 15px 30px 13px 30px;
     }
     .section-title {
-        font-size: 14px;
+        span {
+            font-size: 14px;
+        }
         &::before {
             top: calc(100% + 3px);
         }
     }
     .section-desc-title {
-        font-size: 24px;
+        h3 {
+            font-size: 24px;
+        }
     }
     .section-title {
         margin-bottom: 20px;
