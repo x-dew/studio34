@@ -130,6 +130,9 @@
     position: relative;
     z-index: 2;
 }
+.modal-video iframe {
+    border: none;
+}
 
 
 @media screen and (max-width: 1080px) {

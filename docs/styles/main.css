@@ -2775,6 +2775,10 @@ body {
   z-index: 2;
 }
 
+.modal-video iframe {
+  border: none;
+}
+
 .main-banner__animation-wrap {
   position: relative;
   max-width: 1335px;
@@ -2847,7 +2851,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2881,7 +2885,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2898,7 +2902,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2915,7 +2919,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2932,7 +2936,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2949,7 +2953,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
