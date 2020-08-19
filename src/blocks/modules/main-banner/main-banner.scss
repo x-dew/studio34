@@ -51,7 +51,7 @@
     justify-content: space-between;
     padding-top: 50px;
 }
-.main-banner__title {
+.main-banner__desc h3 {
     font-weight: 300;
     font-size: 65px;
     line-height: 75px;
@@ -155,7 +155,7 @@
             width: 28px;
         }
     }
-    .main-banner__title {
+    .main-banner__desc h3 {
         font-size: 45px;
         line-height: 50px;
     }
@@ -187,7 +187,7 @@
             width: 22px;
         }
     }
-    .main-banner__title {
+    .main-banner__desc h3 {
         font-size: 32px;
         line-height: 35px;
     }
@@ -215,7 +215,7 @@
     }
 }
 @media screen and (max-width: 345px) {
-    .main-banner__title {
+    .main-banner__desc h3 {
         font-size: 27px;
         line-height: 35px;
     }

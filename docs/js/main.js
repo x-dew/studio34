@@ -237,7 +237,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
 /* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
-/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_swiper_settings__WEBPACK_IMPORTED_MODULE_8__);
 // Импортируем jQuery
  // Импортируем необходимые js-файлы Bootstrap 4
 
@@ -257,10 +256,45 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************!*\
   !*** ./src/js/swiper-settings.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
+// Импортируем Swiper slider
+ //Инициализация слайдера work-examples
 
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.work-examples__slider', {
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 40,
+  loop: true,
+  navigation: {
+    nextEl: '.work-examples__slider-next',
+    prevEl: '.work-examples__slider-prev'
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 25,
+      centeredSlides: false
+    },
+    // when window width is >= 441px
+    441: {
+      spaceBetween: 40,
+      centeredSlides: false
+    },
+    // when window width is >= 641px
+    641: {
+      centeredSlides: true
+    },
+    // when window width is >= 1205px
+    1205: {
+      spaceBetween: 60
+    }
+  }
+});
 
 /***/ })
 

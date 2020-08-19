@@ -11,4 +11,4 @@ import "bootstrap/js/dist/modal";
 import "../blocks/modules/header/header";
 import "../blocks/modules/our-mission/our-mission";
 import "../blocks/modules/footer/footer";
-import "./swiper-settings";
+import './swiper-settings';

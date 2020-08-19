@@ -65,7 +65,7 @@
             color: #e6c783;
             transition: 0.5s;
         }
-        .our-mission__scroll-text {
+        .our-mission__scroll-line p {
             color: #505050;
             transition: 0.5s;
         }
@@ -81,13 +81,13 @@
 }
 .our-mission__scroll-line {
     width: max-content;
-}
-.our-mission__scroll-text {
-    font-weight: 300;
-    font-size: 100px;
-    line-height: 88px;
-    color: #1e1e1e;
-    transition: 0.5s;
+    p {
+        font-weight: 300;
+        font-size: 100px;
+        line-height: 88px;
+        color: #1e1e1e;
+        transition: 0.5s;
+    }
 }
 .our-mission__notice {
     color: rgba(129, 111, 73, 0.8);
@@ -95,7 +95,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .our-mission__scroll-text {
+    .our-mission__scroll-line p {
         font-size: 75px;
         line-height: 70px;
     }
@@ -117,7 +117,7 @@
     .our-mission__img img {
         max-height: 100%;
     }
-    .our-mission__scroll-text {
+    .our-mission__scroll-line p {
         font-size: 60px;
         line-height: 55px;
     }
@@ -127,7 +127,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .our-mission__scroll-text {
+    .our-mission__scroll-line p {
         font-size: 55px;
         line-height: 50px;
     }
@@ -151,7 +151,7 @@
     .our-mission__link {
         margin-top: 30px;
     }
-    .our-mission__scroll-text {
+    .our-mission__scroll-line p {
         font-size: 45px;
         line-height: 40px;
     }
@@ -176,7 +176,7 @@
             }
         }
     }
-    .our-mission__scroll-text {
+    .our-mission__scroll-line p {
         font-size: 40px;
         line-height: 35px;
     }
