@@ -2215,6 +2215,7 @@ hr {
   /* 1 */
   overflow: visible;
   /* 2 */
+  margin: 0;
 }
 
 pre {
@@ -2834,7 +2835,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2851,7 +2852,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -2936,7 +2937,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -3557,6 +3558,85 @@ body {
 
 .work-example__number-mob {
   display: none;
+}
+
+.video-articles {
+  padding-top: 115px;
+  padding-bottom: 115px;
+}
+
+.video-articles__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.video-articles__video-col {
+  width: 100%;
+  max-width: 525px;
+  margin-right: 75px;
+  padding-top: 35px;
+}
+
+.video-articles__video-col iframe {
+  width: 100%;
+}
+
+.video-articles__articles-col {
+  width: 100%;
+  max-width: 800px;
+}
+
+.video-articles__item-hr {
+  background: #000000;
+  height: 8px;
+  border: none;
+  margin-top: 10px;
+}
+
+.video-articles__item-title h3 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000000;
+  margin-top: 23px;
+}
+
+.video-articles__item-desc p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #3e3e3e;
+  margin-top: 17px;
+  letter-spacing: 0.1px;
+}
+
+.video-articles__item-date time {
+  font-size: 18px;
+  line-height: 25px;
+  color: #605f6c;
+}
+
+.video-articles__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-left: -30px;
+}
+
+.video-articles__item {
+  flex: 0 0 50%;
+  position: relative;
+  width: 100%;
+  max-width: 50%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 50px;
+}
+
+.video-articles__item:nth-child(1),
+.video-articles__item:nth-child(2) {
+  margin-top: 0;
 }
 
 @media (min-width: 576px) {
@@ -6518,6 +6598,30 @@ body {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .video-articles__wrapper {
+    display: block;
+  }
+
+  .video-articles__video-col,
+  .video-articles__articles-col {
+    max-width: 100%;
+  }
+
+  .video-articles__items {
+    margin-top: 40px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .video-articles__video-col {
+    margin-right: 0;
+  }
+
+  .video-articles__item {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -6811,6 +6915,28 @@ body {
   .work-example__row2-img {
     display: none;
   }
+
+  .video-articles__items {
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .video-articles__item {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .video-articles__item:nth-child(1) {
+    margin-top: 40px;
+  }
+
+  .video-articles__item:nth-child(2) {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -6984,6 +7110,11 @@ body {
 
   .types-work__card-desc p {
     margin-top: 15px;
+  }
+
+  .video-articles__item-title h3 {
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 
@@ -7220,6 +7351,24 @@ body {
   .work-examples__slider-next::after {
     background-position-y: top;
   }
+
+  .video-articles__item-desc p {
+    font-size: 16px;
+  }
+
+  .video-articles__item-hr {
+    height: 6px;
+    margin-top: 8px;
+  }
+
+  .video-articles__video-col {
+    padding-top: 0;
+  }
+
+  .video-articles {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 422px) {
@@ -7424,6 +7573,22 @@ body {
   .stages-work__mob-row:first-child .stages-work__mob-item p,
   .stages-work__mob-item p {
     margin-bottom: 30px;
+  }
+
+  .video-articles__item-title h3 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 15px;
+  }
+
+  .video-articles__item-desc p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .video-articles__item-date time {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
