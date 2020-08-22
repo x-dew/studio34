@@ -633,6 +633,43 @@
         </div>
     </div>
 </section>
+        <section class="contact-form s-full-height">
+    <div class="contact-form__inner">
+        <div class="contact-form__container">
+            <div class="contact-form__wrapper">
+                <div class="contact-form__col"></div>
+                <div class="contact-form__col">
+                    <div class="contact-form__form-box">
+                        <div class="contact-form__title">
+                            <h3>Заказать проект</h3>
+                        </div>
+                        <form action="#" method="post" autocomplete="off" id="s-contact-form">
+                            <div class="contact-form__form-box_item s-label-animation">
+                                <input type="text" id="s-name" name="s-name" maxlength="50" required>
+                                <label for="s-name">Имя</label>
+                            </div>
+                            <div class="contact-form__form-box_item s-label-animation">
+                                <input type="tel" id="s-phone" name="s-phone" pattern="^[0-9-+\s()]*$" minlength="6" maxlength="20" required>
+                                <label for="s-phone">Телефон</label>
+                            </div>
+                            <div class="contact-form__form-box_item s-label-animation">
+                                <input type="email" id="s-email" name="s-email" required>
+                                <label for="s-email">Email</label>
+                            </div>
+                            <div class="contact-form__form-box_item contact-form__textarea">
+                                <label for="task-desc">Описание задачи</label>
+                                <textarea id="task-desc" name="task-desc"></textarea>
+                            </div>
+                            <div class="contact-form__btn">
+                                <button type="submit">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
     </body>
