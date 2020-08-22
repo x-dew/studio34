@@ -1,3 +1,4 @@
+/*Our mission block script*/
 $(document).ready(function () {
     var offSetWind = 0;
     window.addEventListener('scroll', scrollText);
@@ -20,3 +21,4 @@ $(document).ready(function () {
         }
     }
 });
+/*Our mission block script*/

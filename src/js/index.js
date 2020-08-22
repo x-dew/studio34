@@ -10,5 +10,6 @@ import "bootstrap/js/dist/modal";
 // Импортируем другие js-файлы
 import "../blocks/modules/header/header";
 import "../blocks/modules/our-mission/our-mission";
+import "../blocks/modules/contact-form/contact-form";
 import "../blocks/modules/footer/footer";
 import './swiper-settings';

@@ -155,6 +155,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/blocks/modules/contact-form/contact-form.js":
+/*!*********************************************************!*\
+  !*** ./src/blocks/modules/contact-form/contact-form.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {/*Contact form script*/
+$(document).ready(function () {
+  var sContactForm = document.getElementById('s-contact-form');
+  var sFormAllInput = sContactForm.querySelectorAll('input');
+  sFormAllInput.forEach(function (item) {
+    item.addEventListener('input', function () {
+      if (!item.classList.contains('visited')) item.classList.add('visited');
+    });
+  });
+});
+/*Contact form script*/
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./src/blocks/modules/footer/footer.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/footer/footer.js ***!
@@ -184,7 +206,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
+/* WEBPACK VAR INJECTION */(function($) {/*Our mission block script*/
+$(document).ready(function () {
   var offSetWind = 0;
   window.addEventListener('scroll', scrollText);
   var space = 2;
@@ -207,6 +230,7 @@
     }
   }
 });
+/*Our mission block script*/
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -234,9 +258,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../blocks/modules/our-mission/our-mission */ "./src/blocks/modules/our-mission/our-mission.js");
 /* harmony import */ var _blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
+/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/contact-form/contact-form */ "./src/blocks/modules/contact-form/contact-form.js");
+/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
 // Импортируем jQuery
  // Импортируем необходимые js-файлы Bootstrap 4
 
@@ -244,6 +270,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // Импортируем другие js-файлы
+
 
 
 
