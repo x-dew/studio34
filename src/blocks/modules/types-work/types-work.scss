@@ -181,6 +181,9 @@
     .types-work__card-desc p {
         font-size: 16px;
     }
+    .types-work__card:nth-child(odd) {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 345px) {
