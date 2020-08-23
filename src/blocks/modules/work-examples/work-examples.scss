@@ -1,5 +1,4 @@
 .work-examples {
-    background: #e5e5e5;
     padding-top: 115px;
     padding-bottom: 115px;
 }
@@ -456,6 +455,9 @@
     .work-examples__slider-prev::after, .work-examples__slider-next::after {
         background-position-y: top;
     }
+    .work-examples__slider-container {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 390px) {
@@ -479,7 +481,7 @@
     }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 345px) {
     .work-example__slide-title p {
         font-size: 16px;
         line-height: 24px;

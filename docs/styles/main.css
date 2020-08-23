@@ -2457,6 +2457,7 @@ ul {
 body {
   font-family: 'Jost', sans-serif;
   font-weight: 400;
+  background-color: #e6e6e6;
 }
 
 .container {
@@ -2852,7 +2853,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -2903,7 +2904,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
     opacity: 1;
   }
 }
@@ -3395,7 +3396,6 @@ body {
 }
 
 .work-examples {
-  background: #e5e5e5;
   padding-top: 115px;
   padding-bottom: 115px;
 }
@@ -3640,7 +3640,7 @@ body {
 }
 
 .contact-form__inner {
-  background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+  background: linear-gradient(to right, #e6e6e6 50%, #000000 50%);
   width: 100%;
 }
 
@@ -3800,6 +3800,74 @@ body {
 .contact-form__textarea label {
   display: block;
   padding-top: 7px;
+}
+
+.documents__content {
+  width: 100%;
+  max-width: 1040px;
+}
+
+.documents__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.documents__title {
+  margin-right: 30px;
+}
+
+.documents__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.documents__item {
+  flex: 0 0 33.33333%;
+  position: relative;
+  width: 100%;
+  max-width: 33.33333%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 30px;
+}
+
+.documents__item-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 327px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-top: 8px solid #000000;
+  padding: 45px 27px 27px;
+}
+
+.documents__item-group::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-color: #e6e6e6 #e6e6e6 #d1d1d3 #d1d1d3;
+  transform: rotate(90deg);
+  background: #d1d1d3;
+  border-width: 27px 0 0 27px;
+  border-style: solid;
+}
+
+.documents__item-title p {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.documents__item-date {
+  font-size: 18px;
+  line-height: 25px;
+  color: #605f6c;
 }
 
 @media (min-width: 576px) {
@@ -6799,6 +6867,17 @@ body {
   }
 }
 
+@media screen and (max-width: 1140px) {
+  .documents__group {
+    flex-direction: column;
+  }
+
+  .documents__content {
+    max-width: 100%;
+    margin-top: 35px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .main-banner__card__link {
     padding-right: 30px;
@@ -7099,6 +7178,20 @@ body {
 
   .video-articles__item:nth-child(2) {
     margin-top: 40px;
+  }
+
+  .documents__items {
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .documents__item {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -7414,6 +7507,11 @@ body {
   .work-example__row2 {
     margin-top: 20px;
   }
+
+  .documents__item-title p {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -7460,6 +7558,10 @@ body {
 
   .types-work__card-desc p {
     font-size: 16px;
+  }
+
+  .types-work__card:nth-child(odd) {
+    margin-top: 30px;
   }
 
   .stages-work {
@@ -7515,6 +7617,10 @@ body {
     background-position-y: top;
   }
 
+  .work-examples__slider-container {
+    margin-top: 30px;
+  }
+
   .video-articles__item-desc p {
     font-size: 16px;
   }
@@ -7531,6 +7637,10 @@ body {
   .video-articles {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  .documents__content {
+    margin-top: 0;
   }
 }
 
@@ -7738,24 +7848,6 @@ body {
     margin-bottom: 30px;
   }
 
-  .video-articles__item-title h3 {
-    font-size: 22px;
-    line-height: 26px;
-    margin-top: 15px;
-  }
-
-  .video-articles__item-desc p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .video-articles__item-date time {
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-
-@media screen and (max-width: 340px) {
   .work-example__slide-title p {
     font-size: 16px;
     line-height: 24px;
@@ -7780,6 +7872,32 @@ body {
 
   .work-examples__slider-prev {
     margin-right: 5px;
+  }
+
+  .video-articles__item-title h3 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 15px;
+  }
+
+  .video-articles__item-desc p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .video-articles__item-date time {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .documents__item-title p {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .documents__item-group {
+    min-height: 290px;
+    padding: 35px 20px 20px;
   }
 }
 

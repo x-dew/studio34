@@ -1,0 +1,114 @@
+.documents__content {
+    width: 100%;
+    max-width: 1040px;
+}
+.documents__group {
+    display: flex;
+    justify-content: space-between;
+}
+.documents__title {
+    margin-right: 30px;
+}
+.documents__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.documents__item {
+    flex: 0 0 33.33333%;
+    position: relative;
+    width: 100%;
+    max-width: 33.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+.documents__item-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 327px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-top: 8px solid #000000;
+    padding: 45px 27px 27px;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-color: #e6e6e6 #e6e6e6 #d1d1d3 #d1d1d3;
+        transform: rotate(90deg);
+        background: #d1d1d3;
+        border-width: 27px 0 0 27px;
+        border-style: solid;
+    }
+}
+.documents__item-title {
+    p {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 32px;
+        color: #000000;
+    }
+}
+.documents__item-date {
+    font-size: 18px;
+    line-height: 25px;
+    color: #605f6c;
+}
+
+@media screen and (max-width: 1140px) {
+    .documents__group {
+        flex-direction: column;
+    }
+    .documents__content {
+        max-width: 100%;
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .documents__items {
+        margin-right: 0;
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .documents__item {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .documents__item-title {
+        p {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .documents__content {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .documents__item-title {
+        p {
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+    .documents__item-group {
+        min-height: 290px;
+        padding: 35px 20px 20px;
+    }
+}
