@@ -10,3 +10,34 @@ $(document).ready(function () {
     });
 });
 /*Contact form script*/
+
+/* Contact form image animation script*/
+var block_show = false;
+
+function scrollTracking(){
+    if (block_show) {
+        return false;
+    }
+
+    var wt = $(window).scrollTop();
+    var wh = $(window).height();
+    var et = $('.contact-form__wrapper').offset().top;
+    var eh = $('.contact-form__wrapper').outerHeight();
+    var dh = $(document).height();
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+        block_show = true;
+        $('.contact-form__animation').addClass('animation-start');
+    }
+}
+
+$(document).scroll(function(){
+    console.log("scroll")
+    scrollTracking();
+});
+
+$(document).ready(function(){
+    console.log("scroll")
+    scrollTracking();
+});
+/* Contact form image animation script*/
