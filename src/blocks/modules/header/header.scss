@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     background: $bg-dark;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
     .navbar {
         padding: 0;
     }

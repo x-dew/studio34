@@ -13,3 +13,5 @@ import "../blocks/modules/our-mission/our-mission";
 import "../blocks/modules/contact-form/contact-form";
 import "../blocks/modules/footer/footer";
 import './swiper-settings';
+import './full-page-scroll';
+import "./my";

@@ -26,7 +26,8 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <header class="header">
+        <div class="scroll-container" id="fullPageScroll">
+            <header class="header">
     <div class="header-container">
         <nav class="navbar navbar-expand-lg">
             <div class="logo">
@@ -81,7 +82,7 @@
         </nav>
     </div>
 </header>
-        <section class="main-banner">
+            <section class="main-banner section">
     <div class="main-banner__container">
         <div class="main-banner__group">
             <div class="main-banner__desc">
@@ -119,7 +120,7 @@
                     </a>
                 </div>
             </div>
-            <div class="main-banner__card">стрелка вправо
+            <div class="main-banner__card">
                 <h3>Какой-то раздел</h3>
                 <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </p>
                 <div class="main-banner__card__link">
@@ -147,16 +148,16 @@
     </div>
     <!-- Modal -->
 </section>
-        <section class="our-mission s-full-height">
+            <section class="our-mission section s-full-height">
     <div class="our-mission__container">
         <div class="container">
             <div class="section-title s-lg-inline-block">
-                <span>Наша миссия</span>
+                <span class="section-title__anime">Наша миссия</span>
             </div>
             <div class="our-mission__group s-row">
                 <div class="our-mission__desc s-col-2 s-col-full">
                     <div class="section-title s-dm-inline-block">
-                        <span>Наша миссия</span>
+                        <span class="section-title__anime">Наша миссия</span>
                     </div>
                     <div class="our-mission__title section-desc-title">
                         <h3>Созидание в гармонии</h3>
@@ -200,10 +201,10 @@
         </div>
     </div>
 </section>
-        <section class="types-work s-full-height">
+            <section class="types-work section s-full-height">
     <div class="container">
         <div class="section-title">
-            <span>Типы работ</span>
+            <span class="section-title__anime">Типы работ</span>
         </div>
         <div class="types-work__title section-desc-title">
             <h3>Какие проекты мы разарбатываем</h3>
@@ -276,7 +277,7 @@
         </div>
     </div>
 </section>
-        <section class="stages-work s-full-height">
+            <section class="stages-work section s-full-height">
     <div class="stages-work__layout">
         <div class="stages-work__row">
             <div class="stages-work__col"></div>
@@ -310,21 +311,48 @@
                 <div class="stages-work__circle-container">
                     <div class="stages-work__small-circle">
                         <div class="stages-work__small-circle_vn">
-                            <img src="img/stages-work13.svg" alt="этапы работы">
+                            <div class="stages-work__item">
+                                <span class="stages-work__item-text stages-work__size60">13</span>
+                            </div>
                         </div>
                         <div class="stages-work__small-circle_vn">
                             <div class="stages-work__small-circle_item">
-                                <img src="img/stages-work8.svg" alt="этапы работы">
+                                <div class="stages-work__item">
+                                    <span class="stages-work__item-text stages-work__size50">8</span>
+                                </div>
                             </div>
-                            <div class="stages-work__small-circle_item"></div>
+                            <div class="stages-work__small-circle_item">
+                                <div class="stages-work__min-circle">
+                                    <div class="min-circle__item">
+                                        <div class="min-circle__item-vn">
+                                            <div>2</div>
+                                            <div>1</div>
+                                        </div>
+                                        <div class="min-circle__item-vn">
+                                            <div class="stages-work__item">
+                                                <span class="stages-work__item-text stages-work__size18">3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="min-circle__item">
+                                        <div class="stages-work__item">
+                                            <span class="stages-work__item-text stages-work__size22">5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="stages-work__small-circle">
-                        <img src="img/stages-work21.svg" alt="этапы работы">
+                        <div class="stages-work__item">
+                            <span class="stages-work__item-text stages-work__size75">21</span>
+                        </div>
                     </div>
                 </div>
                 <div class="stages-work__circle-container">
-                    <img src="img/stages-work34.svg" alt="этапы работы">
+                    <div class="stages-work__item">
+                        <span class="stages-work__item-text stages-work__size90">34</span>
+                    </div>
                 </div>
             </div>
             <div class="stages-work__col3">
@@ -412,11 +440,11 @@
 
 
 </section>
-        <section class="work-examples s-full-height">
+            <section class="work-examples section s-full-height">
     <div class="work-examples__group">
         <div class="container">
             <div class="section-title">
-                <span>Портфолио</span>
+                <span class="section-title__anime">Портфолио</span>
             </div>
             <div class="work-examples__title section-desc-title">
                 <h3>Примеры работ</h3>
@@ -560,10 +588,10 @@
         </div>
     </div>
 </section>
-        <section class="video-articles s-full-height">
+            <section class="video-articles section s-full-height">
     <div class="container">
         <div class="section-title">
-            <span>Видео</span>
+            <span class="section-title__anime">Видео</span>
         </div>
         <div class="video-articles__title section-desc-title">
             <h3>Видео и статьи о нас и интерьерах</h3>
@@ -632,11 +660,32 @@
         </div>
     </div>
 </section>
-        <section class="contact-form s-full-height">
+            <section class="contact-form section s-full-height">
     <div class="contact-form__inner">
         <div class="contact-form__container">
             <div class="contact-form__wrapper">
-                <div class="contact-form__col"></div>
+                <div class="contact-form__col">
+                    <div class="contact-form__animation">
+                        <div class="contact-form__item contact-form__item1">
+                            <img src="img/contact-form1.png" alt="Контактная форма часть 1">
+                        </div>
+                        <div class="contact-form__item contact-form__item2">
+                            <img src="img/contact-form2.png" alt="Контактная форма часть 2">
+                        </div>
+                        <div class="contact-form__item contact-form__item3">
+                            <img src="img/contact-form3.png" alt="Контактная форма часть 3">
+                        </div>
+                        <div class="contact-form__item contact-form__item4">
+                            <img src="img/contact-form4.png" alt="Контактная форма часть 4">
+                        </div>
+                        <div class="contact-form__item contact-form__item5">
+                            <img src="img/contact-form5.png" alt="Контактная форма часть 5">
+                        </div>
+                        <div class="contact-form__item contact-form__item6">
+                            <img src="img/contact-form6.png" alt="Контактная форма часть 6">
+                        </div>
+                    </div>
+                </div>
                 <div class="contact-form__col">
                     <div class="contact-form__form-box">
                         <div class="contact-form__title">
@@ -669,12 +718,12 @@
         </div>
     </div>
 </section>
-        <section class="documents s-full-height">
+            <section class="documents section s-full-height">
     <div class="container">
         <div class="documents__group">
             <div class="documents__title">
                 <div class="section-title">
-                    <span>Документация</span>
+                    <span class="section-title__anime">Документация</span>
                 </div>
                 <div class="section-desc-title">
                     <h3>Сертификаты</h3>
@@ -723,80 +772,83 @@
         </div>
     </div>
 </section>
-        <footer class="footer">
-    <div class="footer-container">
-        <div class="footer__wrapper">
-            <div class="footer__wrapper-group">
-                <div class="footer__map"></div>
-                <div class="footer__content">
-                    <div class="footer__content-group">
-                        <div class="footer__content-title">
-                            <h3>Контакты</h3>
-                        </div>
-                        <div class="footer__content-items">
-                            <div class="footer__content-item">
-                                <div class="footer__item-sub-title">
-                                    <p>Главный офис в Петербурге</p>
-                                    <hr class="footer__item-hr">
-                                </div>
-                                <div class="footer__item-number">
-                                    <a href="tel:+79526734532">+7 (952) 673-45-32</a>
-                                </div>
-                                <div class="footer__item-address">
-                                    <p>119048, СПБ, Канал ГРИБОЕДОВА, д. 35, стр. 1</p>
-                                </div>
-                                <div class="footer__item-email">
-                                    <a href="mailto:hello@studio34spb.ru">Hello@STUDIO34SPB.RU</a>
-                                </div>
+            <section>
+    <footer class="footer section">
+        <div class="footer-container">
+            <div class="footer__wrapper">
+                <div class="footer__wrapper-group">
+                    <div class="footer__map"></div>
+                    <div class="footer__content">
+                        <div class="footer__content-group">
+                            <div class="footer__content-title">
+                                <h3>Контакты</h3>
                             </div>
-                            <div class="footer__content-item">
-                                <div class="footer__item-sub-title">
-                                    <p>Офис в МОСКВЕ</p>
-                                    <hr class="footer__item-hr">
+                            <div class="footer__content-items">
+                                <div class="footer__content-item">
+                                    <div class="footer__item-sub-title">
+                                        <p>Главный офис в Петербурге</p>
+                                        <hr class="footer__item-hr">
+                                    </div>
+                                    <div class="footer__item-number">
+                                        <a href="tel:+79526734532">+7 (952) 673-45-32</a>
+                                    </div>
+                                    <div class="footer__item-address">
+                                        <p>119048, СПБ, Канал ГРИБОЕДОВА, д. 35, стр. 1</p>
+                                    </div>
+                                    <div class="footer__item-email">
+                                        <a href="mailto:hello@studio34spb.ru">Hello@STUDIO34SPB.RU</a>
+                                    </div>
                                 </div>
-                                <div class="footer__item-number">
-                                    <a href="tel:+74925421041">+7 (492) 542-10-41</a>
-                                </div>
-                                <div class="footer__item-address">
-                                    <p>119048, москва, хамовнический вал, д. 23</p>
-                                </div>
-                                <div class="footer__item-email">
-                                    <a href="mailto:hello@studio34msk.ru">Hello@STUDIO34MSK.RU</a>
+                                <div class="footer__content-item">
+                                    <div class="footer__item-sub-title">
+                                        <p>Офис в МОСКВЕ</p>
+                                        <hr class="footer__item-hr">
+                                    </div>
+                                    <div class="footer__item-number">
+                                        <a href="tel:+74925421041">+7 (492) 542-10-41</a>
+                                    </div>
+                                    <div class="footer__item-address">
+                                        <p>119048, москва, хамовнический вал, д. 23</p>
+                                    </div>
+                                    <div class="footer__item-email">
+                                        <a href="mailto:hello@studio34msk.ru">Hello@STUDIO34MSK.RU</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer__bottom-block">
-            <div class="footer__bottom-block-group">
-                <div class="footer__social-link">
-                    <ul>
-                        <li>
-                            <a href="/"><img src="img/sprites/sprite.svg#s-facebook" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="/"><img src="img/sprites/sprite.svg#s-vk" alt="vk"></a>
-                        </li>
-                        <li>
-                            <a href="/"><img src="img/sprites/sprite.svg#s-instagram" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href="/"><img src="img/sprites/sprite.svg#s-pint" alt="pinterest"></a>
-                        </li>
-                        <li>
-                            <a href="/"><img src="img/sprites/sprite.svg#s-zen" alt="zen"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__copyright">
-                    <p>ООО “Студия 34” 2020. Все права защищены</p>
+            <div class="footer__bottom-block">
+                <div class="footer__bottom-block-group">
+                    <div class="footer__social-link">
+                        <ul>
+                            <li>
+                                <a href="/"><img src="img/sprites/sprite.svg#s-facebook" alt="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="/"><img src="img/sprites/sprite.svg#s-vk" alt="vk"></a>
+                            </li>
+                            <li>
+                                <a href="/"><img src="img/sprites/sprite.svg#s-instagram" alt="instagram"></a>
+                            </li>
+                            <li>
+                                <a href="/"><img src="img/sprites/sprite.svg#s-pint" alt="pinterest"></a>
+                            </li>
+                            <li>
+                                <a href="/"><img src="img/sprites/sprite.svg#s-zen" alt="zen"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__copyright">
+                        <p>ООО “Студия 34” 2020. Все права защищены</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</section>
+        </div>
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
     </body>
