@@ -29,7 +29,7 @@
     &:before {
         content: "";
         position: absolute;
-        width: 95%;
+        width: 0;
         height: 2px;
         background-color: #e6c783;
         transform: rotate(-45deg);
@@ -37,19 +37,23 @@
 }
 .stages-work__size90 {
     font-size: 90px;
+    padding: 20px;
 }
 .stages-work__size75 {
     font-size: 75px;
+    padding: 13px;
 }
 .stages-work__size60 {
     font-size: 60px;
+    padding: 8px;
 }
 .stages-work__size50 {
     font-size: 50px;
+    padding: 7px;
 }
 .stages-work__size22 {
     font-size: 22px;
-    padding: 3px;
+    padding: 4px;
 }
 .stages-work__size18 {
     font-size: 18px;
@@ -94,6 +98,7 @@
     position: relative;
     z-index: 2;
     background-color: #000000;
+    border-radius: 50%;
 }
 .stages-work__title {
     font-weight: 300;
@@ -141,6 +146,10 @@
 }
 
 .stages-work__col {
+    &:first-child {
+        width: 100%;
+        border-bottom: 2px solid;
+    }
     &:nth-child(2) {
         min-width: 190px;
         border-bottom: 2px solid;
@@ -149,10 +158,6 @@
         min-width: 625px;
         border-bottom: 2px solid;
         border-left: 2px solid;
-    }
-    &:first-child {
-        width: 100%;
-        border-bottom: 2px solid;
     }
     &:nth-child(4) {
         min-width: 300px;
@@ -177,23 +182,23 @@
         width: 100%;
     }
     &:nth-child(4) {
-        border-left: 2px solid;
         min-width: 300px;
+        border-left: 2px solid;
     }
     &:last-child {
         width: 100%;
     }
 }
 .stages-work__col3 {
+    &:first-child {
+        width: 100%;
+        border-bottom: 2px solid;
+    }
     &:nth-child(2) {
         display: flex;
         min-width: 819px;
         height: 506px;
         border: 2px solid;
-    }
-    &:first-child {
-        width: 100%;
-        border-bottom: 2px solid;
     }
     &:nth-child(3) {
         min-width: 300px;
@@ -261,6 +266,9 @@
         border-right: 2px solid;
     }
     &:last-child {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
         width: 100%;
         min-width: 501px;
         img {
@@ -275,6 +283,9 @@
         border-bottom: 2px solid;
     }
     &:last-child {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
         height: 100%;
         max-height: 312px;
     }
@@ -290,15 +301,101 @@
 }
 .stages-work__small-circle_item {
     &:first-child {
-        border-left: 2px solid;
         width: 122px;
         height: 118px;
+        border-left: 2px solid;
     }
     &:last-child {
+        height: 70px;
         border-top: 2px solid;
         border-left: 2px solid;
-        height: 70px;
     }
+}
+
+@keyframes borderAnim {
+    0% {
+        width: 50%;
+        height: 50%;
+        border-color: rgba(230, 199, 131, 0);
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-color: rgba(230, 199, 131, 1);
+    }
+}
+
+@keyframes beforeLine {
+    0% {
+        width: 0;
+        transform: rotate(360deg);
+    }
+    100% {
+        width: 95%;
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes bgOpacity {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes borderShow {
+    0% {
+        border-color: rgba(230, 199, 131, 0);
+    }
+    10% {
+        border-color: rgba(230, 199, 131, 0.1);
+    }
+    15% {
+        border-color: rgba(230, 199, 131, 0.2);
+    }
+    20% {
+        border-color: rgba(230, 199, 131, 0.3);
+    }
+    25% {
+        border-color: rgba(230, 199, 131, 0.4);
+    }
+    30% {
+        border-color: rgba(230, 199, 131, 0.5);
+    }
+    40% {
+        border-color: rgba(230, 199, 131, 0.6);
+    }
+    60% {
+        border-color: rgba(230, 199, 131, 0.7);
+    }
+    70% {
+        border-color: rgba(230, 199, 131, 0.8);
+    }
+    80% {
+        border-color: rgba(230, 199, 131, 0.9);
+    }
+    100% {
+        border-color: rgba(230, 199, 131, 1);
+    }
+}
+
+.animation-start .stages-work__item:before {
+    width: 0;
+    opacity: 0;
+    animation: 2s linear forwards beforeLine;
+}
+.animation-start .stages-work__item {
+    width: 50%;
+    height: 50%;
+    border-color: rgba(230, 199, 131, 0);
+    animation: 2s ease forwards borderAnim;
+}
+.animation-start .border-hide-amin {
+    border-color: rgba(0, 0, 0, 0);
+    animation: 8s ease forwards borderShow;
 }
 
 @media screen and (max-width: 1360px) {

@@ -30,6 +30,7 @@
 }
 .work-examples-slide {
     display: flex;
+    position: relative;
     width: 1394px;
     min-height: 704px;
     background: rgba(0, 0, 0, 0.28);
@@ -53,13 +54,25 @@
     width: 100%;
     max-width: 630px;
 }
-.work-examples__slider-next::after {
-    background: url(../img/sprites/sprite.svg#slider-arrow-right) center center no-repeat;
+.work-examples__slider-next {
+    &::after {
+        background: url(../img/sprites/sprite.svg#slider-arrow-right-white) center center no-repeat;
+    }
+    &:hover {
+        &::after {
+            background: url(../img/sprites/sprite.svg#slider-arrow-right-black) center center no-repeat;
+        }
+    }
 }
 .work-examples__slider-prev {
     margin-right: 27px;
     &::after {
-        background: url(../img/sprites/sprite.svg#slider-arrow-left) center center no-repeat;
+        background: url(../img/sprites/sprite.svg#slider-arrow-left-white) center center no-repeat;
+    }
+    &:hover {
+        &::after {
+            background: url(../img/sprites/sprite.svg#slider-arrow-left-black) center center no-repeat;
+        }
     }
 }
 .work-example__column1 {
@@ -142,6 +155,50 @@
 .work-example__number-mob {
     display: none;
 }
+
+@keyframes showTop {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes showBottom {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes showBottomRel {
+    0% {
+        position: relative;
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.animation-start .swiper-slide-active {
+    .work-example__column2 {
+        position: relative;
+        animation: 1s ease-out forwards showTop;
+    }
+    .work-example__column1-img {
+        animation: 1s ease-out forwards showBottom;
+    }
+    .work-example__row2 {
+        animation: 1s ease-out forwards showBottomRel;
+    }
+    .work-example__row1 {
+        position: relative;
+        animation: 1s ease-out forwards showTop;
+    }
+}
+
 
 @media screen and (max-width: 1600px) {
     .work-examples-slide {

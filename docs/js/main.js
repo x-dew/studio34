@@ -213,9 +213,119 @@ $(document).ready(function () {
   !*** ./src/blocks/modules/footer/footer.js ***!
   \*********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function($) {//Google map api settings
+$(document).ready(function () {
+  (function initMap() {
+    var sLatLng = {
+      lat: 59.93172927746452,
+      lng: 30.322663050000028
+    }; // Styles a map in night mode.
 
+    var map = new google.maps.Map(document.getElementById('googleMap'), {
+      center: sLatLng,
+      zoom: 18,
+      disableDefaultUI: true,
+      styles: [{
+        elementType: 'geometry',
+        stylers: [{
+          color: '#343332'
+        }]
+      }, {
+        elementType: 'labels.text.stroke',
+        stylers: [{
+          color: '#242f3e'
+        }]
+      }, {
+        elementType: 'labels.text.fill',
+        stylers: [{
+          color: '#746855'
+        }]
+      }, {
+        elementType: "labels.icon",
+        stylers: [{
+          visibility: "off"
+        }]
+      }, {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [{
+          color: '#454545'
+        }]
+      }, {
+        featureType: 'road',
+        elementType: 'geometry.stroke',
+        stylers: [{
+          color: '#212a37'
+        }]
+      }, {
+        featureType: 'road',
+        elementType: 'labels.text.fill',
+        stylers: [{
+          color: '#9d9d9d'
+        }]
+      }, {
+        featureType: 'road.highway',
+        elementType: 'geometry',
+        stylers: [{
+          color: '#746855'
+        }]
+      }, {
+        featureType: 'road.highway',
+        elementType: 'geometry.stroke',
+        stylers: [{
+          color: '#1f2835'
+        }]
+      }, {
+        featureType: 'road.highway',
+        elementType: 'labels.text.fill',
+        stylers: [{
+          color: '#9d9d9d'
+        }]
+      }, {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [{
+          color: '#191a1a'
+        }]
+      }, {
+        featureType: 'water',
+        elementType: 'labels.text.fill',
+        stylers: [{
+          color: '#9d9d9d'
+        }]
+      }, {
+        featureType: 'water',
+        elementType: 'labels.text.stroke',
+        stylers: [{
+          color: '#9d9d9d'
+        }]
+      }]
+    });
+    new google.maps.Marker({
+      position: sLatLng,
+      map: map,
+      title: "Hello World!",
+      icon: {
+        url: "../img/map-marker.svg",
+        scaledSize: new google.maps.Size(80, 100)
+      }
+    });
+  })();
+}); //Google map api settings
+//Button up
+
+$(document).ready(function () {
+  var timeOutGoUp;
+
+  (function goUp() {
+    document.getElementById('goUpBtn').addEventListener('click', function () {
+      location.hash = 0;
+    });
+  })();
+}); //Button up
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -227,6 +337,33 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 
+
+/***/ }),
+
+/***/ "./src/blocks/modules/main-banner/main-banner.js":
+/*!*******************************************************!*\
+  !*** ./src/blocks/modules/main-banner/main-banner.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {//Stop video on modal window close
+$(document).ready(function () {
+  var mainBannerVideoBlock = document.getElementById('main-modal-video');
+
+  if (mainBannerVideoBlock) {
+    var mainBannerVideoIframe = mainBannerVideoBlock.getElementsByTagName("iframe")[0];
+
+    if (mainBannerVideoIframe) {
+      var mainBannerVideoUrl = mainBannerVideoIframe.getAttribute('src');
+      $('#videoModal').on('hidden.bs.modal', function (e) {
+        mainBannerVideoIframe.setAttribute('src', '');
+        mainBannerVideoIframe.setAttribute('src', mainBannerVideoUrl);
+      });
+    }
+  }
+}); //Stop video on modal window close
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -278,7 +415,7 @@ $(document).ready(function () {
       cursor = 0,
       arr,
       timeout,
-      prob = 0.3 // вероятность "разгадывания" очередной позиции
+      prob = 0.5 // вероятность "разгадывания" очередной позиции
   ,
       rate = 10 // частота "кадров" в секунду
   ,
@@ -404,6 +541,23 @@ $(document).ready(function () {
       var li = document.createElement('li');
       var a = document.createElement('a');
       a.setAttribute('href', '#' + i);
+      a.addEventListener('click', function (i_local) {
+        return function () {
+          if (sections[i_local].classList) {
+            if (!sections[i_local].classList.contains('animation-start')) {
+              for (var el = 0; el < sections.length; el++) {
+                if (el !== i_local && sections[el].classList) {
+                  sections[el].classList.remove('animation-start');
+                }
+              }
+
+              if (sections[i_local].classList) {
+                sections[i_local].classList.add('animation-start');
+              }
+            }
+          }
+        };
+      }(i));
       li.appendChild(a);
 
       _self.ul.appendChild(li);
@@ -489,6 +643,10 @@ $(document).ready(function () {
       }
     };
 
+    this.handleModalClose = function () {
+      $('#videoModal').modal('hide');
+    };
+
     this.mouseWheelAndKey = function (event) {
       if (event.deltaY > 0 || event.keyCode == 40) {
         if (_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
@@ -497,6 +655,8 @@ $(document).ready(function () {
           _self.changeCurrentPosition(_self.defaults.currentPosition);
 
           _self.animateClassAdd('top');
+
+          _self.handleModalClose();
         }
       } else if (event.deltaY < 0 || event.keyCode == 38) {
         if (_self.defaults.currentPosition > 0) {
@@ -505,6 +665,8 @@ $(document).ready(function () {
           _self.changeCurrentPosition(_self.defaults.currentPosition);
 
           _self.animateClassAdd('bottom');
+
+          _self.handleModalClose();
         }
       }
 
@@ -520,6 +682,8 @@ $(document).ready(function () {
       mTouchEnd = parseInt(event.changedTouches[0].clientY);
 
       if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
+        _self.handleModalClose();
+
         if (mTouchEnd > mTouchStart) {
           if (_self.defaults.currentPosition > 0) {
             _self.defaults.currentPosition--;
@@ -593,7 +757,6 @@ $(document).ready(function () {
           this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
 
           if (!updatePageStatus) {
-            console.log("red");
             this.defaults.sections[i].classList.add('animation-start');
             sectionTitle = this.defaults.sections[i].querySelectorAll('.section-title__anime');
 
@@ -684,13 +847,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/contact-form/contact-form */ "./src/blocks/modules/contact-form/contact-form.js");
 /* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
-/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./full-page-scroll */ "./src/js/full-page-scroll.js");
-/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_full_page_scroll__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./my */ "./src/js/my.js");
-/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_my__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
+/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./full-page-scroll */ "./src/js/full-page-scroll.js");
+/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_full_page_scroll__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../blocks/modules/main-banner/main-banner */ "./src/blocks/modules/main-banner/main-banner.js");
+/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./my */ "./src/js/my.js");
+/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_my__WEBPACK_IMPORTED_MODULE_12__);
 // Импортируем jQuery
  // Импортируем необходимые js-файлы Bootstrap 4
 
@@ -698,6 +863,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // Импортируем другие js-файлы
+
 
 
 

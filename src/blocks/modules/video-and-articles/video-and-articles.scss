@@ -26,13 +26,17 @@
     height: 8px;
     border: none;
     margin-top: 10px;
+    transition: 0.3s;
 }
-.video-articles__item-title h3 {
-    font-weight: 300;
-    font-size: 28px;
-    line-height: 32px;
-    color: #000000;
+.video-articles__item-title {
     margin-top: 23px;
+    a {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 32px;
+        color: #000000;
+        margin-top: 23px;
+    }
 }
 .video-articles__item-desc p {
     font-size: 18px;
@@ -62,6 +66,41 @@
     margin-top: 50px;
     &:nth-child(1), &:nth-child(2) {
         margin-top: 0;
+    }
+    &:hover {
+        .video-articles__item-hr {
+            background: #E6C783;
+            transition: 0.3s;
+        }
+    }
+}
+.animation-start .video-articles__item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appearance 0.5s forwards;
+}
+.video-articles__item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.video-articles__item:nth-child(2) {
+    animation-delay: 0.75s;
+}
+.video-articles__item:nth-child(3) {
+    animation-delay: 1s;
+}
+.video-articles__item:nth-child(4) {
+    animation-delay: 1.25s;
+}
+.video-articles__item:nth-child(5) {
+    animation-delay: 1.5s;
+}
+.video-articles__item:nth-child(6) {
+    animation-delay: 1.75s;
+}
+@keyframes appearance {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -108,9 +147,12 @@
 }
 
 @media screen and (max-width: 550px) {
-    .video-articles__item-title h3 {
-        font-size: 24px;
-        line-height: 30px;
+    .video-articles__item-title {
+        margin-top: 15px;
+        a {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }
 
@@ -132,10 +174,9 @@
 }
 
 @media screen and (max-width: 345px) {
-    .video-articles__item-title h3 {
+    .video-articles__item-title a {
         font-size: 22px;
         line-height: 26px;
-        margin-top: 15px;
     }
     .video-articles__item-desc p {
         font-size: 14px;

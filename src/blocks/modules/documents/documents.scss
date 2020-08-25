@@ -34,6 +34,7 @@
     background-color: #ffffff;
     border-top: 8px solid #000000;
     padding: 45px 27px 27px;
+    transition: 0.3s;
     &::before {
         content: "";
         position: absolute;
@@ -44,6 +45,10 @@
         background: #d1d1d3;
         border-width: 27px 0 0 27px;
         border-style: solid;
+    }
+    &:hover {
+        border-color: #e6c783;
+        transition: 0.3s;
     }
 }
 .documents__item-title {
@@ -58,6 +63,36 @@
     font-size: 18px;
     line-height: 25px;
     color: #605f6c;
+}
+
+.animation-start .documents__item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: documentsShow 0.5s forwards;
+}
+.documents__item:nth-child(1) {
+    animation-delay: 0.35s;
+}
+.documents__item:nth-child(2) {
+    animation-delay: 0.70s;
+}
+.documents__item:nth-child(3) {
+    animation-delay: 1.05s;
+}
+.documents__item:nth-child(4) {
+    animation-delay: 1.4s;
+}
+.documents__item:nth-child(5) {
+    animation-delay: 1.75s;
+}
+.documents__item:nth-child(6) {
+    animation-delay: 2.05s;
+}
+@keyframes documentsShow {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1140px) {

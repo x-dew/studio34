@@ -84,11 +84,45 @@
 .footer__content-items {
     margin-top: 47px;
 }
+.footer__bottom-block-container {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1920px;
+}
+.footer__up-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #605f6c;
+    border-radius: 50%;
+    transition: 0.3s;
+    svg {
+        width: 15px;
+        margin-top: -3px;
+        margin-left: 3px;
+    }
+    &:hover {
+        border-color: #e6c783;
+        cursor: pointer;
+        transition: 0.3s;
+        svg path {
+            fill: #e6c783;
+            transition: 0.3s;
+        }
+    }
+}
+.footer__up-button-container {
+    position: absolute;
+    right: 80px;
+}
 .footer__bottom-block {
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     max-width: 1425px;
     min-height: 143px;
