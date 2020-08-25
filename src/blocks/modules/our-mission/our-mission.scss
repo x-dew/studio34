@@ -3,40 +3,49 @@
     padding-bottom: 93px;
     background-color: #000000;
 }
+
 .our-mission__container {
     width: 100%;
 }
+
 .our-mission__group {
     align-items: center;
     justify-content: space-between;
 }
+
 .our-mission__title {
     h3 {
         color: #e6c789;
     }
 }
+
 .our-mission__desc-vn {
     width: 100%;
     max-width: 565px;
     margin-top: 30px;
+
     p {
         font-size: 18px;
         line-height: 25px;
         color: #adadba;
         margin-bottom: 30px;
         margin-top: 0;
+
         &:last-child {
             margin-bottom: 0;
         }
     }
 }
+
 .our-mission__link {
     margin-top: 40px;
+
     a {
         position: relative;
         font-size: 18px;
         line-height: 25px;
         color: #e6c783;
+
         &::after {
             content: url(../img/sprites/sprite.svg#arrow-right-gold);
             display: inline-block;
@@ -48,38 +57,41 @@
         }
     }
 }
+
 .our-mission__img {
     img {
         width: 100%;
         max-height: 430px;
     }
 }
+
 .our-mission__scroll-block {
     position: relative;
     z-index: 2;
     width: 100%;
     margin-top: 145px;
+
     &:hover {
-        .our-mission__notice {
-            color: #e6c783;
-            transition: 0.5s;
-        }
         .our-mission__scroll-line p {
             color: #505050;
             transition: 0.5s;
         }
     }
 }
+
 .our-mission__scroll-lines {
     overflow: scroll;
     overflow-y: hidden;
     -ms-overflow-style: none;
+
     &::-webkit-scrollbar {
         width: 0;
     }
 }
+
 .our-mission__scroll-line {
     width: max-content;
+
     p {
         font-weight: 300;
         font-size: 100px;
@@ -88,9 +100,23 @@
         transition: 0.5s;
     }
 }
+
 .our-mission__notice {
     color: rgba(129, 111, 73, 0.8);
-    transition: 0.5s;
+    transition: 0.8s;
+    background-image: -o-linear-gradient(91deg, #e6c783 30%, #e6c783 77%, rgba(247, 181, 14, 0) 70%);
+    background-image: linear-gradient(-1deg, #e6c783 30%, #e6c783 77%, rgba(247, 181, 14, 0) 70%);
+    background-repeat: no-repeat;
+    background-position: -1000px;
+    -webkit-transition: 0.8s 0.8s background-position;
+    -o-transition: 0.8s 0.8s background-position;
+    transition: 0.8s 0.8s background-position;
+}
+
+.animation-start .our-mission__notice {
+    background-position: 0;
+    color: #000000;
+    transition: 0.8s;
 }
 
 @media screen and (max-width: 1024px) {
@@ -142,6 +168,7 @@
     }
     .our-mission__desc-vn {
         margin-top: 20px;
+
         p {
             font-size: 16px;
             margin-bottom: 20px;
@@ -159,6 +186,7 @@
 @media screen and (max-width: 345px) {
     .our-mission__desc-vn {
         margin-top: 15px;
+
         p {
             font-size: 14px;
             margin-bottom: 15px;
@@ -167,8 +195,10 @@
     }
     .our-mission__link {
         margin-top: 25px;
+
         a {
             font-size: 16px;
+
             &::after {
                 right: -25px;
                 width: 18px;

@@ -39,6 +39,10 @@
         margin-top: 120px;
     }
 }
+.modal-open .scroll-container {
+    transform: unset!important;
+    transition: unset!important;
+}
 .main-banner__container {
     position: relative;
     z-index: 2;

@@ -4,7 +4,7 @@ function bruteForcePasswordEffect (nick, el) {
 		, cursor = 0
 		, arr
 		, timeout
-		, prob = 0.3 // вероятность "разгадывания" очередной позиции
+		, prob = 0.5 // вероятность "разгадывания" очередной позиции
 		, rate = 10  // частота "кадров" в секунду
 		, delay = 1000 / rate
 		, alphabet = []
@@ -124,6 +124,22 @@ function bruteForcePasswordEffect (nick, el) {
 			var a = document.createElement('a');
 
 			a.setAttribute('href', '#' + i);
+			a.addEventListener('click', (function (i_local) {
+				return function () {
+					if(sections[i_local].classList) {
+						if(!sections[i_local].classList.contains('animation-start')) {
+							for(var el =0; el < sections.length; el++) {
+								if(el !== i_local && sections[el].classList) {
+									sections[el].classList.remove('animation-start')
+								}
+							}
+							if(sections[i_local].classList) {
+								sections[i_local].classList.add('animation-start')
+							}
+						}
+					}
+				}
+			})(i))
 			li.appendChild(a);
 			_self.ul.appendChild(li);
 		}
@@ -203,18 +219,24 @@ function bruteForcePasswordEffect (nick, el) {
 
 		}
 
+		this.handleModalClose = function() {
+			$('#videoModal').modal('hide')
+		}
+
 		this.mouseWheelAndKey = function (event) {
 			if (event.deltaY > 0 || event.keyCode == 40) {
 				if(_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
 					_self.defaults.currentPosition ++;
 					_self.changeCurrentPosition(_self.defaults.currentPosition);
 					_self.animateClassAdd('top');
+					_self.handleModalClose();
 				}
 			} else if (event.deltaY < 0 || event.keyCode == 38) {
 				if(_self.defaults.currentPosition > 0) {
 					_self.defaults.currentPosition --;
 					_self.changeCurrentPosition(_self.defaults.currentPosition);
 					_self.animateClassAdd('bottom');
+					_self.handleModalClose();
 				}
 
 			}
@@ -229,7 +251,7 @@ function bruteForcePasswordEffect (nick, el) {
 		this.touchEnd = function (event) {
 			mTouchEnd = parseInt(event.changedTouches[0].clientY);
 			if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
-
+				_self.handleModalClose();
 				if (mTouchEnd > mTouchStart) {
 					if(_self.defaults.currentPosition > 0) {
 						_self.defaults.currentPosition --;
@@ -299,7 +321,6 @@ function bruteForcePasswordEffect (nick, el) {
 						this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
 
 						if(!updatePageStatus) {
-							console.log("red")
 							this.defaults.sections[i].classList.add('animation-start');
 							sectionTitle = this.defaults.sections[i].querySelectorAll('.section-title__anime');
 							if(sectionTitle.length) {

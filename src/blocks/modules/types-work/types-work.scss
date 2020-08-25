@@ -59,6 +59,33 @@
     }
 }
 
+@keyframes numberRotate {
+    0% {
+        transform: rotate(-0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes typesPT {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 120px;
+    }
+}
+
+.animation-start .types-work__card:nth-child(odd) {
+    margin-top: 0;
+    animation: 1s ease-out forwards typesPT;
+}
+.animation-start .types-work__card-number span {
+    transform: rotate(0deg);
+    animation: 1s ease-out forwards numberRotate;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 768px) {
     .types-work__card-number span {
         font-size: 70px;

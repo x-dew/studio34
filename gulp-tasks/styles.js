@@ -17,16 +17,32 @@ import yargs from "yargs";
 const argv = yargs.argv,
     production = !!argv.production;
 
+/* параметры для gulp-autoprefixer */
+const autoprefixerList = [
+    'Chrome >= 45',
+    'Firefox ESR',
+    'Edge >= 12',
+    'Explorer >= 10',
+    'iOS >= 9',
+    'Safari >= 9',
+    'Android >= 4.4',
+    'Opera >= 30'
+];
+
 gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
         .pipe(sass())
         .pipe(groupmedia())
-        .pipe(gulpif(production, autoprefixer({
+        .pipe(autoprefixer({
             cascade: false,
-            grid: true
-        })))
+            grid: true,
+            overrideBrowserslist:  [
+                "> 1%",
+                "last 2 versions"
+            ],
+        }))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
                 1: {
