@@ -60,6 +60,7 @@ $letter-position: (
 @media screen and (max-width: 1460px) {
     .main-banner__animation-wrap {
         text-align: center;
+        margin: 15px auto 20px;
     }
 }
 @media screen and (max-width: 1270px) {
@@ -95,7 +96,7 @@ $letter-position: (
 }
 @media screen and (max-width: 405px) {
     .animation-letter, .animation-space {
-        font-size: 55px;
+        font-size: 60px;
     }
     .main-banner__animation-wrap {
         margin: 1.8em auto 0;

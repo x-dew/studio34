@@ -6,7 +6,7 @@ $(document).ready(function () {
         if(mainBannerVideoIframe) {
             var mainBannerVideoUrl = mainBannerVideoIframe.getAttribute('src');
 
-            $('#videoModal').on('hidden.bs.modal', function (e) {
+            $('#videoModal').on('hidden.bs.modal', function () {
                 mainBannerVideoIframe.setAttribute('src', '')
                 mainBannerVideoIframe.setAttribute('src', mainBannerVideoUrl)
             })

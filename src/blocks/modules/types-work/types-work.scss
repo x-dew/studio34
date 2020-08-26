@@ -86,6 +86,16 @@
     animation: 1s ease-out forwards numberRotate;
 }
 
+@media screen and (max-width: 1460px) {
+    .types-work__cards {
+        padding-right: 20px;
+    }
+    .types-work {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
 @media screen and (max-width: 1200px) and (min-width: 768px) {
     .types-work__card-number span {
         font-size: 70px;
@@ -125,6 +135,12 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .types-work__cards {
+        padding-right: 0;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .types-work__card {
         padding-right: 15px;
@@ -145,6 +161,11 @@
     .types-work {
         padding-top: 115px;
         padding-bottom: 115px;
+    }
+    .animation-start .types-work__card:nth-child(odd) {
+        margin-top: 40px;
+        -webkit-animation: unset;
+        animation: unset;
     }
 }
 
@@ -171,6 +192,11 @@
         flex-basis: 100%;
         max-width: 100%;
         margin-top: 40px;
+    }
+    .animation-start .types-work__card {
+        &:first-child {
+            margin-top: 10px;
+        }
     }
     .types-work__card-header {
         display: flex;
@@ -201,10 +227,6 @@
 }
 
 @media screen and (max-width: 440px) {
-    .types-work {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
     .types-work__card-desc p {
         font-size: 16px;
     }

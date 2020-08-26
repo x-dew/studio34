@@ -96,7 +96,8 @@
     .contact-form__item {
         backface-visibility: visible;
         animation-name: turner;
-        animation-duration: 6s;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -276,5 +277,108 @@
     label {
         display: block;
         padding-top: 7px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .contact-form__animation img {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .contact-form__animation img {
+        max-width: 75%;
+    }
+    .contact-form__col:first-child {
+        max-width: 300px;
+    }
+    .contact-form__animation {
+        top: 140px;
+    }
+    .animation-start {
+        .contact-form__item {
+            animation: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .contact-form__animation img {
+        max-width: 60%;
+    }
+    .contact-form__col:first-child {
+        max-width: 260px;
+    }
+    .contact-form__animation {
+        top: 160px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .contact-form__col:first-child {
+        display: none;
+    }
+    .contact-form__col:last-child {
+        padding-left: 0;
+    }
+    .contact-form__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contact-form {
+        background: #000000;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .contact-form__form-box {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contact-form__col:last-child {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form__btn button {
+        min-height: 55px;
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .contact-form__title h3 {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .contact-form__form-box_item label, .contact-form__form-box_item input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .contact-form__title h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .contact-form__form-box_item label, .contact-form__form-box_item input {
+        font-size: 14px;
+    }
+    .contact-form__form-box_item:not(:first-child) {
+        margin-top: 25px;
+    }
+    .contact-form__form-box_item textarea {
+        min-height: 100px;
+    }
+    .contact-form__btn button {
+        min-height: 49px;
+        font-size: 14px;
     }
 }
