@@ -137,6 +137,10 @@
             line-height: 30px;
         }
     }
+    .animation-start .documents__item {
+        animation: none;
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 440px) {
