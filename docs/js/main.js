@@ -324,7 +324,7 @@ $(document).ready(function () {
       } else {
         $('html, body').animate({
           scrollTop: 0
-        }, '800');
+        }, '300');
       }
     });
   })();

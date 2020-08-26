@@ -3170,8 +3170,8 @@ body {
   }
 
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    -webkit-transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -3184,8 +3184,8 @@ body {
   }
 
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    -webkit-transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -3205,8 +3205,8 @@ body {
   }
 
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    -webkit-transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -3219,8 +3219,8 @@ body {
   }
 
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-    transform: translate3d(0, 0, 0) rotate(360deg);
+    -webkit-transform: translate3d(0, 0, 0) rotate(-360deg);
+    transform: translate3d(0, 0, 0) rotate(-360deg);
     opacity: 1;
   }
 }
@@ -10037,7 +10037,7 @@ body {
 
 @media screen and (max-width: 375px) {
   .main-banner__group {
-    padding-top: 60px;
+    padding-top: 25px;
   }
 
   .animation-letter,

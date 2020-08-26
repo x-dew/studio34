@@ -83,7 +83,7 @@ $(document).ready(function () {
             if ( $(window).width() > 991) {
                 location.hash = 0;
             } else {
-                $('html, body').animate({scrollTop:0}, '800');
+                $('html, body').animate({scrollTop:0}, '300');
             }
         })
     })();
