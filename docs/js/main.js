@@ -308,7 +308,7 @@ $(document).ready(function () {
       map: map,
       title: "Hello World!",
       icon: {
-        url: "../img/map-marker.svg",
+        url: "img/map-marker.svg",
         scaledSize: new google.maps.Size(80, 100)
       }
     });
@@ -317,11 +317,15 @@ $(document).ready(function () {
 //Button up
 
 $(document).ready(function () {
-  var timeOutGoUp;
-
   (function goUp() {
     document.getElementById('goUpBtn').addEventListener('click', function () {
-      location.hash = 0;
+      if ($(window).width() > 991) {
+        location.hash = 0;
+      } else {
+        $('html, body').animate({
+          scrollTop: 0
+        }, '800');
+      }
     });
   })();
 }); //Button up
@@ -356,7 +360,7 @@ $(document).ready(function () {
 
     if (mainBannerVideoIframe) {
       var mainBannerVideoUrl = mainBannerVideoIframe.getAttribute('src');
-      $('#videoModal').on('hidden.bs.modal', function (e) {
+      $('#videoModal').on('hidden.bs.modal', function () {
         mainBannerVideoIframe.setAttribute('src', '');
         mainBannerVideoIframe.setAttribute('src', mainBannerVideoUrl);
       });
@@ -367,50 +371,64 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/our-mission/our-mission.js":
-/*!*******************************************************!*\
-  !*** ./src/blocks/modules/our-mission/our-mission.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {/*Our mission block script*/
-$(document).ready(function () {
-  var offSetWind = 0;
-  window.addEventListener('scroll', scrollText);
-  var space = 2;
-  if (window.innerHeight > 500) space = 10;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/js/dist/util */ "./node_modules/bootstrap/js/dist/util.js");
+/* harmony import */ var bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/js/dist/dropdown */ "./node_modules/bootstrap/js/dist/dropdown.js");
+/* harmony import */ var bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/js/dist/modal */ "./node_modules/bootstrap/js/dist/modal.js");
+/* harmony import */ var bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../blocks/modules/header/header */ "./src/blocks/modules/header/header.js");
+/* harmony import */ var _blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../blocks/modules/contact-form/contact-form */ "./src/blocks/modules/contact-form/contact-form.js");
+/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/main-banner/main-banner */ "./src/blocks/modules/main-banner/main-banner.js");
+/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
+/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./my */ "./src/js/my.js");
+/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_my__WEBPACK_IMPORTED_MODULE_10__);
+// Импортируем jQuery
+ // Импортируем необходимые js-файлы Bootstrap 4
 
-  function scrollText() {
-    if (window.pageYOffset > $('.our-mission__scroll-line1').offset().top - window.innerHeight && window.pageYOffset < $('.our-mission__scroll-line2').offset().top + window.innerHeight) {
-      if (offSetWind > window.pageYOffset) {
-        document.getElementsByClassName('our-mission__scroll-lines')[0].scrollLeft -= space;
-        document.getElementsByClassName('our-mission__scroll-lines')[1].scrollLeft -= space;
-      } else if (offSetWind !== 0) {
-        document.getElementsByClassName('our-mission__scroll-lines')[0].scrollLeft += space;
-        document.getElementsByClassName('our-mission__scroll-lines')[1].scrollLeft += space;
-      } else {
-        document.getElementsByClassName('our-mission__scroll-lines')[0].scrollLeft = 500;
-        document.getElementsByClassName('our-mission__scroll-lines')[1].scrollLeft = 500;
-      }
 
-      offSetWind = window.pageYOffset;
-    }
-  }
-});
-/*Our mission block script*/
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+
+ // Импортируем другие js-файлы
+
+
+
+
+
+
+
 
 /***/ }),
 
-/***/ "./src/js/full-page-scroll.js":
-/*!************************************!*\
-  !*** ./src/js/full-page-scroll.js ***!
-  \************************************/
+/***/ "./src/js/my.js":
+/*!**********************!*\
+  !*** ./src/js/my.js ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {function bruteForcePasswordEffect(nick, el) {
+/* WEBPACK VAR INJECTION */(function($) {/**
+ * Функция для имитации подбора пороля, для заголовков
+ */
+function bruteForcePasswordEffect(nick, el) {
   var L = nick.length,
       cursor = 0,
       arr,
@@ -425,11 +443,11 @@ $(document).ready(function () {
       aL; // заполним алфавит из которого брать случайные символы
 
   for (i = 128; i <= 255; i++) {
-    alphabet.push(String.fromCharCode(i));
+    alphabet.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
   }
 
   for (i = 1024; i <= 1279; i++) {
-    alphabet.push(String.fromCharCode(i));
+    alphabet.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
   }
 
   aL = alphabet.length;
@@ -451,7 +469,70 @@ $(document).ready(function () {
   tweak();
 }
 /**
- * Full page
+ * Добавление css класса для анимации, если размер экрана меньше 991px
+ */
+
+
+var isScrolling = false;
+window.addEventListener("scroll", throttleScroll, false);
+
+function throttleScroll(e) {
+  if (isScrolling == false) {
+    window.requestAnimationFrame(function () {
+      scrolling(e);
+      isScrolling = false;
+    });
+  }
+
+  isScrolling = true;
+} //Получаем все section на странице
+
+
+var allSections = document.querySelectorAll('section');
+var sectionTitlesAnim = '';
+var sectionTitlesAnimStatus = true;
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
+function titleAnimation(section) {
+  if (!section.classList.contains("animation-start")) {
+    sectionTitlesAnim = section.querySelectorAll('.section-title__anime');
+
+    if (sectionTitlesAnim.length) {
+      for (var el = 0; el < sectionTitlesAnim.length; el++) {
+        bruteForcePasswordEffect(sectionTitlesAnim[el].textContent, sectionTitlesAnim[el]);
+      }
+
+      sectionTitlesAnim = '';
+    }
+
+    sectionTitlesAnim = '';
+  }
+} //Проверяем текущий section на видимость
+
+
+function scrolling(e) {
+  for (var i = 0; i < allSections.length; i++) {
+    var sectionItem = allSections[i];
+
+    if (isPartiallyVisible(sectionItem)) {
+      titleAnimation(sectionItem);
+      sectionItem.classList.add("animation-start");
+    } else {
+      sectionItem.classList.remove("animation-start");
+    }
+  }
+} //Определение частично видимых элементов
+
+
+function isPartiallyVisible(el) {
+  var elementBoundary = el.getBoundingClientRect();
+  var top = elementBoundary.top;
+  var bottom = elementBoundary.bottom;
+  var height = elementBoundary.height;
+  return top + height >= 0 && height + window.innerHeight - 300 >= bottom;
+}
+/**
+ * Полноэкранная прокрутка если размер экрана больше 991px
  */
 
 
@@ -506,6 +587,21 @@ $(document).ready(function () {
     location.hash = 0;
     this.changeCurrentPosition(anchor);
     this.registerIeTags();
+  };
+  /**
+   * Destroy plugin
+   */
+
+
+  fullScroll.prototype.destroy = function () {
+    this.ul.remove();
+    var noHashURL = window.location.href.replace(/#.*$/, '');
+    window.history.replaceState('', document.title, noHashURL);
+    document.removeEventListener('mousewheel', this.mouseWheelAndKey, false);
+    document.removeEventListener('wheel', this.mouseWheelAndKey, false);
+    document.removeEventListener('keyup', this.mouseWheelAndKey, false);
+    document.removeEventListener('touchstart', this.touchStart, false);
+    document.removeEventListener('touchend', this.touchEnd, false);
   };
   /**
    * Build sections
@@ -799,127 +895,41 @@ $(document).ready(function () {
   window.fullScroll = fullScroll;
 })();
 
-$(document).ready(function () {
-  new fullScroll({
-    mainElement: 'fullPageScroll',
-    // parent container
-    container: 'fullPageScroll',
-    // content section
-    sections: 'section',
-    // animation speed
-    animateTime: 0.7,
-    // easing for animation
-    animateFunction: 'ease',
-    // current position
-    currentPosition: 0,
-    // display dots navigation
-    displayDots: true,
-    // where to place the dots navigation
-    dotsPosition: 'right'
-  });
-});
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/js/dist/util */ "./node_modules/bootstrap/js/dist/util.js");
-/* harmony import */ var bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_util__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/js/dist/dropdown */ "./node_modules/bootstrap/js/dist/dropdown.js");
-/* harmony import */ var bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_dropdown__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/js/dist/modal */ "./node_modules/bootstrap/js/dist/modal.js");
-/* harmony import */ var bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_modal__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../blocks/modules/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_header_header__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../blocks/modules/our-mission/our-mission */ "./src/blocks/modules/our-mission/our-mission.js");
-/* harmony import */ var _blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_our_mission_our_mission__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../blocks/modules/contact-form/contact-form */ "./src/blocks/modules/contact-form/contact-form.js");
-/* harmony import */ var _blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_contact_form_contact_form__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _swiper_settings__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./swiper-settings */ "./src/js/swiper-settings.js");
-/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./full-page-scroll */ "./src/js/full-page-scroll.js");
-/* harmony import */ var _full_page_scroll__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_full_page_scroll__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../blocks/modules/main-banner/main-banner */ "./src/blocks/modules/main-banner/main-banner.js");
-/* harmony import */ var _blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_main_banner_main_banner__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../blocks/modules/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_blocks_modules_footer_footer__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./my */ "./src/js/my.js");
-/* harmony import */ var _my__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_my__WEBPACK_IMPORTED_MODULE_12__);
-// Импортируем jQuery
- // Импортируем необходимые js-файлы Bootstrap 4
-
-
-
-
- // Импортируем другие js-файлы
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./src/js/my.js":
-/*!**********************!*\
-  !*** ./src/js/my.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {// Получаем нужный элемент
-var element = document.querySelector('#target');
-
-var VisibleElelm = function VisibleElelm(target) {
-  // Все позиции элемента
-  var targetPosition = {
-    top: window.pageYOffset + target.getBoundingClientRect().top,
-    left: window.pageXOffset + target.getBoundingClientRect().left,
-    right: window.pageXOffset + target.getBoundingClientRect().right,
-    bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-  },
-      // Получаем позиции окна
-  windowPosition = {
-    top: window.pageYOffset,
-    left: window.pageXOffset,
-    right: window.pageXOffset + document.documentElement.clientWidth,
-    bottom: window.pageYOffset + document.documentElement.clientHeight
-  };
-
-  if (targetPosition.bottom > windowPosition.top || targetPosition.top < windowPosition.bottom) {
-    return true;
+function initFullPageScroll() {
+  if ($(window).width() > 991) {
+    if (!fullPageScrollSetting) {
+      fullPageScrollSetting = new fullScroll({
+        mainElement: 'fullPageScroll',
+        // parent container
+        container: 'fullPageScroll',
+        // content section
+        sections: 'section',
+        // animation speed
+        animateTime: 0.7,
+        // easing for animation
+        animateFunction: 'ease',
+        // current position
+        currentPosition: 0,
+        // display dots navigation
+        displayDots: true,
+        // where to place the dots navigation
+        dotsPosition: 'right'
+      });
+    }
   } else {
-    return false;
+    if (fullPageScrollSetting) {
+      fullPageScrollSetting.destroy();
+      fullPageScrollSetting = '';
+    }
   }
+}
 
-  ;
-};
-
+var fullPageScrollSetting = '';
+$(window).resize(function () {
+  initFullPageScroll();
+});
 $(document).ready(function () {
-  var allSections = document.querySelectorAll('section');
-  allSections.forEach(function (item) {
-    var sectionTitle = item.querySelector('.section-title');
-    window.addEventListener('scroll', function () {
-      if (VisibleElelm(item)) {
-        if (sectionTitle) console.log(item.querySelector('.section-title'));
-      }
-    });
-  });
+  initFullPageScroll();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 

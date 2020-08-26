@@ -1,5 +1,8 @@
 .main-banner {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    min-height: 100vh;
     background: #000000;
     overflow: hidden;
     padding-top: 100px;
@@ -9,7 +12,7 @@
         position: absolute;
         z-index: 1;
         width: 100%;
-        height: 892px;
+        height: calc(100vh - 220px);
         background: url(../img/banner-bg.jpg) no-repeat;
         background-size: cover;
     }
@@ -46,6 +49,7 @@
 .main-banner__container {
     position: relative;
     z-index: 2;
+    width: 100%;
     max-width: 1335px;
     margin: 0 auto;
     padding-left: 15px;
@@ -101,8 +105,9 @@
     justify-content: flex-end;
     position: relative;
     z-index: 2;
+    width: 100%;
     max-width: 1920px;
-    margin: 76px auto 0;
+    margin-top: auto;
 }
 .main-banner__card {
     flex: 1;
@@ -121,6 +126,12 @@
         color: #3e3e3e;
         margin-top: 22px;
         padding-left: 50px;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 .main-banner__card__link {
@@ -139,6 +150,29 @@
     border: none;
 }
 
+@media screen and (max-width: 1920px) and (min-width: 1141px) {
+    .main-banner__desc h3 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .main-banner__btn {
+        margin-top: 35px;
+    }
+    .main-banner__group {
+        padding-top: 40px;
+    }
+    .animation-letter, .animation-space {
+        font-size: 230px;
+        line-height: 250px;
+    }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 991px) {
+    .animation-letter, .animation-space {
+        font-size: 170px;
+        line-height: 210px;
+    }
+}
 
 @media screen and (max-width: 1080px) {
     .main-banner__card__link {
@@ -146,6 +180,12 @@
     }
     .main-banner__card p {
         padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 440px) {
+    .main-banner {
+        padding-top: 84.02px;
     }
 }
 @media screen and (max-width: 800px) {
@@ -166,6 +206,12 @@
     .main-banner__desc h3 {
         font-size: 45px;
         line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main-banner__animation {
+        margin-top: 50px;
     }
 }
 @media screen and (max-width: 650px) {
@@ -215,13 +261,26 @@
             max-width: 100%;
         }
     }
-    .main-banner__cards {
-        margin-top: 50px;
-    }
     .main-banner__btn {
         margin-top: 25px;
     }
 }
+
+@media screen and (max-width: 440px) {
+    .main-banner {
+        padding-top: 75px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-banner__group {
+        padding-top: 60px;
+    }
+    .animation-letter, .animation-space {
+        font-size: 55px;
+    }
+}
+
 @media screen and (max-width: 345px) {
     .main-banner__desc h3 {
         font-size: 27px;
@@ -244,5 +303,8 @@
     }
     .main-banner__cards-container {
         padding-bottom: 30px;
+    }
+    .main-banner {
+        padding-top: 72px;
     }
 }

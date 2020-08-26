@@ -68,7 +68,7 @@ $(document).ready(function () {
             map,
             title: "Hello World!",
             icon: {
-                url: "../img/map-marker.svg",
+                url: "img/map-marker.svg",
                 scaledSize: new google.maps.Size(80, 100)
             }
         });
@@ -78,10 +78,13 @@ $(document).ready(function () {
 
 //Button up
 $(document).ready(function () {
-    var timeOutGoUp;
     (function goUp() {
         document.getElementById('goUpBtn').addEventListener('click', function() {
-            location.hash = 0;
+            if ( $(window).width() > 991) {
+                location.hash = 0;
+            } else {
+                $('html, body').animate({scrollTop:0}, '800');
+            }
         })
     })();
 })

@@ -226,6 +226,13 @@
     }
 }
 
+@media screen and (max-width: 1460px) {
+    .work-examples {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .work-examples-slide {
         width: 1000px;
@@ -322,7 +329,7 @@
 
 @media screen and (max-width: 1024px) {
     .work-examples__slider-container {
-        padding: 0 15px;
+        padding: 0 30px 0 15px;
     }
     .work-examples-slide {
         width: 100%;
@@ -337,6 +344,12 @@
     .work-example__slide-desc-small p {
         font-size: 16px;
         line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .work-examples__slider-container {
+        padding: 0 15px;
     }
 }
 
@@ -478,10 +491,6 @@
 }
 
 @media screen and (max-width: 440px) {
-    .work-examples {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
     .work-examples-slide {
         width: 85%;
     }
