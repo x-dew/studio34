@@ -13,4 +13,5 @@ import "../blocks/modules/contact-form/contact-form";
 import '../blocks/modules/main-banner/main-banner';
 import "../blocks/modules/footer/footer";
 import './swiper-settings';
+import './particles.min';
 import "./my";
