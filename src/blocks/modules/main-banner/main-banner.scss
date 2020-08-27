@@ -194,6 +194,10 @@
     .main-banner__card__link {
         margin-top: 14px;
     }
+    .main-banner::before {
+        height: 100%;
+        background-position-x: left;
+    }
 }
 
 @media screen and (max-width: 800px) {

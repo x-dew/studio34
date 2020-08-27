@@ -87,6 +87,7 @@
 
 .contact-form__animation {
     position: absolute;
+    z-index: 5;
     top: 87px;
     transform-style: preserve-3d;
     transition: transform 1s;
