@@ -1,7 +1,7 @@
 /**
  * Функция для имитации подбора пороля, для заголовков
  */
-function bruteForcePasswordEffect (nick, el) {
+function bruteForcePasswordEffect(nick, el) {
 
     var L = nick.length
         , cursor = 0
@@ -16,8 +16,8 @@ function bruteForcePasswordEffect (nick, el) {
     ;
 
     // заполним алфавит из которого брать случайные символы
-    for (i = 128; i <= 255; i++) alphabet.push(String.fromCharCode(97+Math.floor(Math.random() * 26)));
-    for (i = 1024; i <= 1279; i++) alphabet.push(String.fromCharCode(97+Math.floor(Math.random() * 26)));
+    for (i = 128; i <= 255; i++) alphabet.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
+    for (i = 1024; i <= 1279; i++) alphabet.push(String.fromCharCode(97 + Math.floor(Math.random() * 26)));
     aL = alphabet.length;
 
     function tweak() {
@@ -46,7 +46,7 @@ window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
     if (isScrolling == false) {
-        window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(function () {
             scrolling(e);
             isScrolling = false;
         });
@@ -61,9 +61,9 @@ var sectionTitlesAnimStatus = true
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function titleAnimation(section) {
-    if(!section.classList.contains("animation-start")) {
+    if (!section.classList.contains("animation-start")) {
         sectionTitlesAnim = section.querySelectorAll('.section-title__anime');
-        if(sectionTitlesAnim.length) {
+        if (sectionTitlesAnim.length) {
             for (var el = 0; el < sectionTitlesAnim.length; el++) {
                 bruteForcePasswordEffect(sectionTitlesAnim[el].textContent, sectionTitlesAnim[el])
             }
@@ -86,6 +86,7 @@ function scrolling(e) {
         }
     }
 }
+
 //Определение частично видимых элементов
 function isPartiallyVisible(el) {
     var elementBoundary = el.getBoundingClientRect();
@@ -96,7 +97,6 @@ function isPartiallyVisible(el) {
 
     return ((top + height >= 0) && (height + window.innerHeight - 300 >= bottom));
 }
-
 
 
 /**
@@ -126,10 +126,10 @@ function isPartiallyVisible(el) {
          * @type {Object}
          */
         var defaults = {
-            container : main,
-            sections : sections,
-            animateTime : params.animateTime || 0.7,
-            animateFunction : params.animateFunction || 'ease',
+            container: main,
+            sections: sections,
+            animateTime: params.animateTime || 0.7,
+            animateFunction: params.animateFunction || 'ease',
             maxPosition: sections.length - 1,
             currentPosition: 0,
             displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
@@ -204,14 +204,14 @@ function isPartiallyVisible(el) {
             a.setAttribute('href', '#' + i);
             a.addEventListener('click', (function (i_local) {
                 return function () {
-                    if(sections[i_local].classList) {
-                        if(!sections[i_local].classList.contains('animation-start')) {
-                            for(var el =0; el < sections.length; el++) {
-                                if(el !== i_local && sections[el].classList) {
+                    if (sections[i_local].classList) {
+                        if (!sections[i_local].classList.contains('animation-start')) {
+                            for (var el = 0; el < sections.length; el++) {
+                                if (el !== i_local && sections[el].classList) {
                                     sections[el].classList.remove('animation-start')
                                 }
                             }
-                            if(sections[i_local].classList) {
+                            if (sections[i_local].classList) {
                                 sections[i_local].classList.add('animation-start')
                             }
                         }
@@ -248,8 +248,8 @@ function isPartiallyVisible(el) {
             /**
              * Enable scroll if decive don't have touch support
              */
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                if(!('ontouchstart' in window)){
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                if (!('ontouchstart' in window)) {
                     document.body.style = "overflow: scroll;";
                     document.documentElement.style = "overflow: scroll;";
                 }
@@ -275,9 +275,9 @@ function isPartiallyVisible(el) {
         var updatePageStatus = false;
 
         this.animateClassAdd = function (type) {
-            if(updatePageStatus) {
+            if (updatePageStatus) {
                 sectionTitle = this.defaults.sections[_self.defaults.currentPosition].querySelectorAll('.section-title__anime');
-                if(sectionTitle.length) {
+                if (sectionTitle.length) {
                     for (var i = 0; i < sectionTitle.length; i++) {
                         bruteForcePasswordEffect(sectionTitle[i].textContent, sectionTitle[i])
                     }
@@ -285,10 +285,10 @@ function isPartiallyVisible(el) {
                 }
             }
 
-            if(type === 'top') {
+            if (type === 'top') {
                 _self.defaults.sections[_self.defaults.currentPosition].classList.add('animation-start')
                 _self.defaults.sections[_self.defaults.currentPosition - 1].classList.remove('animation-start')
-            } else if(type === 'bottom') {
+            } else if (type === 'bottom') {
                 _self.defaults.sections[_self.defaults.currentPosition].classList.add('animation-start')
                 _self.defaults.sections[_self.defaults.currentPosition + 1].classList.remove('animation-start')
             } else {
@@ -297,21 +297,21 @@ function isPartiallyVisible(el) {
 
         }
 
-        this.handleModalClose = function() {
+        this.handleModalClose = function () {
             $('#videoModal').modal('hide')
         }
 
         this.mouseWheelAndKey = function (event) {
             if (event.deltaY > 0 || event.keyCode == 40) {
-                if(_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
-                    _self.defaults.currentPosition ++;
+                if (_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
+                    _self.defaults.currentPosition++;
                     _self.changeCurrentPosition(_self.defaults.currentPosition);
                     _self.animateClassAdd('top');
                     _self.handleModalClose();
                 }
             } else if (event.deltaY < 0 || event.keyCode == 38) {
-                if(_self.defaults.currentPosition > 0) {
-                    _self.defaults.currentPosition --;
+                if (_self.defaults.currentPosition > 0) {
+                    _self.defaults.currentPosition--;
                     _self.changeCurrentPosition(_self.defaults.currentPosition);
                     _self.animateClassAdd('bottom');
                     _self.handleModalClose();
@@ -331,13 +331,13 @@ function isPartiallyVisible(el) {
             if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
                 _self.handleModalClose();
                 if (mTouchEnd > mTouchStart) {
-                    if(_self.defaults.currentPosition > 0) {
-                        _self.defaults.currentPosition --;
+                    if (_self.defaults.currentPosition > 0) {
+                        _self.defaults.currentPosition--;
                         _self.animateClassAdd('bottom');
                     }
                 } else {
-                    if(_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
-                        _self.defaults.currentPosition ++;
+                    if (_self.defaults.currentPosition < _self.defaults.sections.length - 1) {
+                        _self.defaults.currentPosition++;
                         _self.animateClassAdd('top');
                     }
                 }
@@ -374,7 +374,7 @@ function isPartiallyVisible(el) {
                 document.detachEvent('onkeyup', this.mouseWheelAndKey, false);
             }
 
-            setTimeout(function(){
+            setTimeout(function () {
                 _self.addEvents();
             }, 600);
         };
@@ -398,10 +398,10 @@ function isPartiallyVisible(el) {
                 if (i == this.defaults.currentPosition) {
                     this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
 
-                    if(!updatePageStatus) {
+                    if (!updatePageStatus) {
                         this.defaults.sections[i].classList.add('animation-start');
                         sectionTitle = this.defaults.sections[i].querySelectorAll('.section-title__anime');
-                        if(sectionTitle.length) {
+                        if (sectionTitle.length) {
                             for (var i = 0; i < sectionTitle.length; i++) {
                                 bruteForcePasswordEffect(sectionTitle[i].textContent, sectionTitle[i])
                             }
@@ -439,18 +439,18 @@ function isPartiallyVisible(el) {
 
 
 function initFullPageScroll() {
-    if ( $(window).width() > 991) {
+    if ($(window).width() > 991) {
         if (!fullPageScrollSetting) {
             fullPageScrollSetting = new fullScroll({
                 mainElement: 'fullPageScroll',
                 // parent container
-                container : 'fullPageScroll',
+                container: 'fullPageScroll',
                 // content section
-                sections : 'section',
+                sections: 'section',
                 // animation speed
-                animateTime : 0.7,
+                animateTime: 0.7,
                 // easing for animation
-                animateFunction : 'ease',
+                animateFunction: 'ease',
                 // current position
                 currentPosition: 0,
                 // display dots navigation
@@ -461,7 +461,7 @@ function initFullPageScroll() {
             });
         }
     } else {
-        if(fullPageScrollSetting) {
+        if (fullPageScrollSetting) {
             fullPageScrollSetting.destroy();
             fullPageScrollSetting = ''
         }
@@ -470,9 +470,62 @@ function initFullPageScroll() {
 
 var fullPageScrollSetting = '';
 
-$(window).resize(function() {
+$(window).resize(function () {
     initFullPageScroll()
 });
 $(document).ready(function () {
     initFullPageScroll()
 })
+
+
+//particlesJS
+
+var particlesJsOption = {
+    "particles": {
+        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+        "color": {"value": "#ffffff"},
+        "shape": {
+            "type": "circle",
+            "stroke": {"width": 0, "color": "#000000"},
+            "polygon": {"nb_sides": 5},
+            "image": {"src": "img/github.svg", "width": 100, "height": 100}
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}
+        },
+        "size": {"value": 3, "random": true, "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}},
+        "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {"enable": true, "mode": "grab"},
+            "onclick": {"enable": true, "mode": "push"},
+            "resize": true
+        },
+        "modes": {
+            "grab": {"distance": 400, "line_linked": {"opacity": 1}},
+            "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3},
+            "repulse": {"distance": 200, "duration": 0.4},
+            "push": {"particles_nb": 4},
+            "remove": {"particles_nb": 2}
+        }
+    },
+    "retina_detect": true
+};
+
+particlesJS("particles-js__our-mission", particlesJsOption);
+particlesJS("particles-js__stages-work", particlesJsOption);
+particlesJS("particles-js__footer", particlesJsOption);

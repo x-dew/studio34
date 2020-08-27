@@ -5,6 +5,7 @@
     color: #e6c783;
 }
 .stages-work__layout {
+    position: relative;
     width: 100%;
 }
 .stages-work__layout-mob {
@@ -410,6 +411,8 @@
         display: none;
     }
     .stages-work__layout-mob {
+        position: relative;
+        z-index: 5;
         display: block;
     }
     .stages-work__mob-banner {

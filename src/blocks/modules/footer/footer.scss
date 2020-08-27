@@ -16,6 +16,8 @@
     display: flex;
 }
 .footer__map {
+    position: relative;
+    z-index: 5;
     margin-right: 72px;
     width: 100%;
     max-width: 905px;
@@ -167,6 +169,10 @@
         }
     }
 }
+.footer__content-group {
+    position: relative;
+    z-index: 5;
+}
 
 
 
@@ -235,6 +241,10 @@
     .footer__up-btn svg {
         width: 13px;
         margin-left: 0;
+    }
+    #particles-js__footer {
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 

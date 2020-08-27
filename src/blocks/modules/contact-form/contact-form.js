@@ -32,12 +32,10 @@ function scrollTracking(){
 }
 
 $(document).scroll(function(){
-    console.log("scroll")
     scrollTracking();
 });
 
 $(document).ready(function(){
-    console.log("scroll")
     scrollTracking();
 });
 /* Contact form image animation script*/
