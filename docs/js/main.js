@@ -906,7 +906,7 @@ function initFullPageScroll() {
         // content section
         sections: 'section',
         // animation speed
-        animateTime: 0.7,
+        animateTime: 1.3,
         // easing for animation
         animateFunction: 'ease',
         // current position
