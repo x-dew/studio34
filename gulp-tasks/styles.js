@@ -18,15 +18,16 @@ const argv = yargs.argv,
     production = !!argv.production;
 
 /* параметры для gulp-autoprefixer */
-const autoprefixerList = [
-    'Chrome >= 45',
-    'Firefox ESR',
-    'Edge >= 12',
-    'Explorer >= 10',
-    'iOS >= 9',
-    'Safari >= 9',
-    'Android >= 4.4',
-    'Opera >= 30'
+const autoprefixBrowsers = [
+    "> 1%",
+    "last 2 versions",
+    "firefox >= 4",
+    "safari 7",
+    "safari 8",
+    "IE 8",
+    "IE 9",
+    "IE 10",
+    "IE 11"
 ];
 
 gulp.task("styles", () => {
@@ -38,10 +39,7 @@ gulp.task("styles", () => {
         .pipe(autoprefixer({
             cascade: false,
             grid: true,
-            overrideBrowserslist:  [
-                "> 1%",
-                "last 2 versions"
-            ],
+            overrideBrowserslist:  autoprefixBrowsers
         }))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
