@@ -41,12 +41,11 @@ function bruteForcePasswordEffect(nick, el) {
  * Добавление css класса для анимации
  */
 var isScrolling = false;
-var scrollAnimFrame = '';
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
     if (isScrolling == false) {
-        scrollAnimFrame = window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
             scrolling(e);
             isScrolling = false;
         });
@@ -100,16 +99,9 @@ function isPartiallyVisible(el, count) {
 
 //Button up
 $(document).ready(function () {
-    function scrollUp() {
-        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentScroll > 0) {
-            window.cancelAnimationFrame(scrollAnimFrame);
-            window.requestAnimationFrame(scrollUp);
-            window.scrollTo (0,currentScroll - (currentScroll/5));
-        }
-    }
-    var goTopBtn = document.getElementById('goUpBtn');
-    goTopBtn.addEventListener('click', scrollUp);
+    $('#goUpBtn').click(function(){
+        $('html, body').animate({scrollTop: 0}, 1000);
+    });
 })
 
 
