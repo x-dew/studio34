@@ -281,20 +281,7 @@ $(document).ready(function () {
         scaledSize: new google.maps.Size(80, 100)
       }
     });
-  })(); //Button up
-
-
-  function scrollUp() {
-    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-    if (currentScroll > 0) {
-      window.requestAnimationFrame(scrollUp);
-      window.scrollTo(0, currentScroll - currentScroll / 5);
-    }
-  }
-
-  var goTopBtn = document.getElementById('goUpBtn');
-  goTopBtn.addEventListener('click', scrollUp);
+  })();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
@@ -393,9 +380,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./src/js/my.js ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-/**
+/* WEBPACK VAR INJECTION */(function($) {/**
  * Функция для имитации подбора пороля, для заголовков
  */
 function bruteForcePasswordEffect(nick, el) {
@@ -444,11 +431,12 @@ function bruteForcePasswordEffect(nick, el) {
 
 
 var isScrolling = false;
+var scrollAnimFrame = '';
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
   if (isScrolling == false) {
-    window.requestAnimationFrame(function () {
+    scrollAnimFrame = window.requestAnimationFrame(function () {
       scrolling(e);
       isScrolling = false;
     });
@@ -500,8 +488,23 @@ function isPartiallyVisible(el, count) {
   var bottom = elementBoundary.bottom;
   var height = elementBoundary.height;
   return top + height >= 0 && height + window.innerHeight - count >= bottom;
-} //particlesJS
+} //Button up
 
+
+$(document).ready(function () {
+  function scrollUp() {
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0) {
+      window.cancelAnimationFrame(scrollAnimFrame);
+      window.requestAnimationFrame(scrollUp);
+      window.scrollTo(0, currentScroll - currentScroll / 5);
+    }
+  }
+
+  var goTopBtn = document.getElementById('goUpBtn');
+  goTopBtn.addEventListener('click', scrollUp);
+}); //particlesJS
 
 var particlesJsOption = {
   "particles": {
@@ -616,6 +619,7 @@ var particlesJsOption = {
 particlesJS("particles-js__our-mission", particlesJsOption);
 particlesJS("particles-js__stages-work", particlesJsOption);
 particlesJS("particles-js__footer", particlesJsOption);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
