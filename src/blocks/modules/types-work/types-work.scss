@@ -79,11 +79,11 @@
 
 .animation-start .types-work__card:nth-child(odd) {
     margin-top: 0;
-    animation: 1s ease-out forwards typesPT;
+    animation: 1.7s ease-out forwards typesPT;
 }
 .animation-start .types-work__card-number span {
     transform: rotate(0deg);
-    animation: 1s ease-out forwards numberRotate;
+    animation: 1.5s ease-out forwards numberRotate;
 }
 
 @media screen and (max-width: 1460px) {

@@ -1,6 +1,5 @@
-
-//Google map api settings
 $(document).ready(function () {
+    //Google map api settings
     (function initMap() {
         var sLatLng = {
             lat: 59.93172927746452,
@@ -73,19 +72,16 @@ $(document).ready(function () {
             }
         });
     })()
-})
-//Google map api settings
 
-//Button up
-$(document).ready(function () {
-    (function goUp() {
-        document.getElementById('goUpBtn').addEventListener('click', function() {
-            if ( $(window).width() > 991) {
-                location.hash = 0;
-            } else {
-                $('html, body').animate({scrollTop:0}, '300');
-            }
-        })
-    })();
+    //Button up
+    function scrollUp() {
+        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentScroll > 0) {
+            window.requestAnimationFrame(scrollUp);
+            window.scrollTo (0,currentScroll - (currentScroll/5));
+        }
+    }
+    var goTopBtn = document.getElementById('goUpBtn');
+    goTopBtn.addEventListener('click', scrollUp);
+
 })
-//Button up

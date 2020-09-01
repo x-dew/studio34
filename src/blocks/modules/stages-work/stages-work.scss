@@ -382,20 +382,25 @@
         border-color: rgba(230, 199, 131, 1);
     }
 }
-
-.animation-start .stages-work__item:before {
+.stages-work__item::before {
     width: 0;
     opacity: 0;
-    animation: 2s linear forwards beforeLine;
 }
-.animation-start .stages-work__item {
+.stages-work__item {
     width: 50%;
     height: 50%;
     border-color: rgba(230, 199, 131, 0);
+}
+.animation-start .stages-work__item::before {
+    animation: 2s linear forwards beforeLine;
+}
+.animation-start .stages-work__item {
     animation: 2s ease forwards borderAnim;
 }
-.animation-start .border-hide-amin {
+.stages-work .border-hide-anim {
     border-color: rgba(0, 0, 0, 0);
+}
+.animation-start .border-hide-anim {
     animation: 8s ease forwards borderShow;
 }
 
@@ -411,9 +416,9 @@
         display: none;
     }
     .stages-work__layout-mob {
+        display: block;
         position: relative;
         z-index: 5;
-        display: block;
     }
     .stages-work__mob-banner {
         text-align: center;
