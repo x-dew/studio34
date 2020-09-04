@@ -16,69 +16,14 @@
     position: relative;
 }
 
-@keyframes turner {
+/*@keyframes turner {
     0% {
-        transform: rotateY(0deg);
-        margin-top: 26px;
-    }
-    5% {
-        margin-top: 27px;
-    }
-    10% {
-        margin-top: 28px;
-    }
-    15% {
-        margin-top: 29px;
-    }
-    20% {
-        margin-top: 30px;
-    }
-    25% {
-        margin-top: 31px;
-    }
-    30% {
-        margin-top: 32px;
-    }
-    35% {
-        margin-top: 33px;
-    }
-    40% {
-        margin-top: 34px;
-    }
-    45% {
-        margin-top: 35px;
-    }
-    50% {
-        margin-top: 34px;
-    }
-    55% {
-        margin-top: 33px;
-    }
-    60% {
-        margin-top: 32px;
-    }
-    65% {
-        margin-top: 31px;
-    }
-    70% {
-        margin-top: 30px;
-    }
-    75% {
-        margin-top: 29px;
-    }
-    80% {
-        margin-top: 28px;
-    }
-    85% {
-        margin-top: 27px;
-    }
-    90% {
-        margin-top: 26px;
+        left: -100%;
     }
     100% {
-        transform: rotateY(360deg);
+        left: 0;
     }
-}
+}*/
 
 .contact-form__item {
     line-height: 0;
@@ -89,42 +34,19 @@
     position: absolute;
     z-index: 5;
     top: 87px;
+    /*left: -100%;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 1s;*/
 }
 
-.animation-start {
-    .contact-form__item {
+/*.animation-start {
+    .contact-form__animation {
         backface-visibility: visible;
         animation-name: turner;
-        animation-duration: 4s;
+        animation-duration: 2s;
         animation-fill-mode: forwards;
     }
-}
-
-.contact-form__item1 {
-    animation-delay: .1s;
-}
-
-.contact-form__item2 {
-    animation-delay: .2s;
-}
-
-.contact-form__item3 {
-    animation-delay: .3s;
-}
-
-.contact-form__item4 {
-    animation-delay: .4s;
-}
-
-.contact-form__item5 {
-    animation-delay: .5s;
-}
-
-.contact-form__item6 {
-    animation-delay: .6s;
-}
+}*/
 
 .contact-form__col {
     width: 100%;
