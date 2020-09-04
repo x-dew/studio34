@@ -77,11 +77,9 @@ function scrolling(e) {
     for (var i = 0; i < allSections.length; i++) {
         var sectionItem = allSections[i];
 
-        if (isPartiallyVisible(sectionItem, 300)) {
+        if (!sectionItem.classList.contains("animation-start") && isPartiallyVisible(sectionItem, 300)) {
             titleAnimation(sectionItem);
             sectionItem.classList.add("animation-start");
-        } else if(!isPartiallyVisible(sectionItem, 100)) {
-            sectionItem.classList.remove("animation-start");
         }
     }
 }
