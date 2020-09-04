@@ -1,11 +1,17 @@
 .footer {
     position: relative;
-    background-color: #000000;
     min-height: 100vh;
 }
+.footer-section {
+    background: #000000;
+}
 .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     max-width: 1920px;
+    min-height: 100vh;
     margin: 0 auto;
 }
 .footer__wrapper {
@@ -89,10 +95,9 @@
 .footer__bottom-block-container {
     display: flex;
     align-items: flex-start;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     max-width: 1920px;
+    margin-top: 80px;
 }
 .footer__up-btn {
     display: flex;
@@ -315,6 +320,9 @@
     .footer__up-button-container {
         top: 40px;
         right: calc(50% - 30px);
+    }
+    .footer__bottom-block-container {
+        margin-top: 40px;
     }
 }
 

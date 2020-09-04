@@ -98,7 +98,7 @@ function isPartiallyVisible(el, count) {
 //Button up
 $(document).ready(function () {
     $('#goUpBtn').click(function(){
-        $('html, body').animate({scrollTop: 0}, 1000);
+        $('html, body').animate({scrollTop: 0}, 800);
     });
 })
 
