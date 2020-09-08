@@ -71,6 +71,7 @@
         "bootstrap": "^4.5.2",
         "jquery": "^3.5.1",
         "popper.js": "^1.16.1",
+        "priority-nav": "^1.0.13",
         "sharp": "^0.25.4",
         "swiper": "^5.4.3"
     },

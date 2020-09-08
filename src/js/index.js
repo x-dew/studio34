@@ -14,4 +14,5 @@ import '../blocks/modules/main-banner/main-banner';
 import "../blocks/modules/footer/footer";
 import './swiper-settings';
 import './particles.min';
+import './priority-nav';
 import "./my";

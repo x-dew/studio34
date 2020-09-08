@@ -4,26 +4,22 @@
     display: flex;
     align-items: center;
     background: $bg-dark;
-    position: absolute;
-    z-index: 9999;
-    top: 0;
-    width: 100%;
     .navbar {
         padding: 0;
     }
     .navbar-brand {
         margin-right: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
     }
     a {
         color: $menu-color;
         font-size: 18px;
         line-height: 25px;
-        display: flex;
-        align-items: center;
     }
     .logo {
-        margin-right: 68px;
+        margin-right: 40px;
         img {
             height: 44.03px;
         }
@@ -35,9 +31,10 @@
         line-height: 25px;
         letter-spacing: 0.443em;
         color: $logo-text-color;
+        white-space: nowrap;
     }
     .personal-area {
-        margin-left: 70px;
+        padding-left: 10px;
         img {
             height: 25px;
         }
@@ -47,21 +44,111 @@
         width: 100%;
     }
 }
-
 .header-container {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
     padding: 25px 15px 30px 15px;
 }
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+/* priority-nav */
+.priority-nav {
+    white-space: nowrap;
+    flex-grow: 2;
+    text-align: center;
+}
+
+.priority-nav > ul {
+    display: inline-block;
+}
+
+.priority-nav > ul > li {
+    display: inline-block;
+}
+.priority-nav > ul > li:not(:last-child) {
+    padding-right: 1.5rem;
+}
+
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    border: none;
+    vertical-align: middle;
+    padding: 0;
+    background: url(../img/menuTog.png) 50% 50% no-repeat transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.priority-nav__wrapper {
+    position: relative;
+}
+
+.priority-nav__dropdown {
+    position: absolute;
+    visibility: hidden;
+    top: 30px;
+    right: 0;
+    min-width: 180px;
+    list-style: none;
+    background-color: #000000;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.priority-nav__dropdown.show {
+    visibility: visible;
+    z-index: 5;
+}
+.is-empty .priority-nav-is-visible, .is-empty .priority-nav__wrapper {
+    position: initial;
+}
+.is-empty .priority-nav__dropdown {
+    top: 70px;
+    width: 100%;
+}
+.priority-nav__dropdown li:not(:last-child) {
+    padding-bottom: 5px;
+}
+.priority-nav__dropdown-toggle {
+    visibility: hidden;
+    position: absolute;
+}
+
+.priority-nav-is-visible {
+    visibility: visible;
+    margin-left: 1.5rem;
+}
+
+.priority-nav-is-hidden {
+    visibility: hidden;
+}
+.is-empty .priority-nav-is-visible {
+    margin-left: 0;
+    width: 30px;
+    height: 26px;
+    background-size: cover;
+}
+.priority-nav.is-empty {
+    text-align: right;
+    padding-right: 5px;
+}
+/* priority-nav */
+.is-empty + .header__group .personal-area a {
+    padding-top: 2px;
+    display: block;
+}
 @media screen and(max-width: 1510px) and (min-width: 991px) {
     .header {
         .logo {
             margin-right: 30px;
-        }
-        .personal-area {
-            margin-left: 30px;
         }
     }
 }
@@ -83,12 +170,6 @@
         font-size: 16px;
         line-height: 22px;
     }
-    .header .personal-area {
-        margin-left: 15px;
-    }
-    .header-container {
-        padding: 25px 0 30px 0;
-    }
 }
 
 @media screen and(max-width: 1125px) and (min-width: 991px) {
@@ -98,9 +179,6 @@
             img {
                 height: 40px;
             }
-        }
-        .personal-area {
-            margin-left: 20px;
         }
     }
 }
@@ -124,20 +202,6 @@
     }
 }
 
-@media screen and(min-width: 992px) {
-    .header {
-        .logo {
-            order: 0;
-        }
-        .main-menu {
-            order: 1;
-        }
-        .header__group {
-            order: 2;
-        }
-    }
-}
-
 @media screen and (max-width: 991px) {
     .header {
         .header-container {
@@ -145,9 +209,6 @@
         }
         .main-menu {
             margin-top: 30px;
-        }
-        .personal-area {
-            margin-left: 0;
         }
         .header__group {
             display: flex;
@@ -160,6 +221,9 @@
         .menu-toggler {
             margin-left: 20px;
         }
+    }
+    .is-empty .priority-nav__dropdown {
+        top: 65px;
     }
 }
 
@@ -211,6 +275,16 @@
         .main-menu {
             margin-top: 25px;
         }
+        .personal-area {
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .is-empty .priority-nav-is-visible {
+        width: 27px;
+        height: 22px;
     }
 }
 
