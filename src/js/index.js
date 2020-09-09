@@ -9,6 +9,7 @@ import "bootstrap/js/dist/modal";
 
 // Импортируем другие js-файлы
 import "../blocks/modules/header/header";
+import "../blocks/modules/stages-work/stages-work";
 import "../blocks/modules/contact-form/contact-form";
 import '../blocks/modules/main-banner/main-banner';
 import "../blocks/modules/footer/footer";

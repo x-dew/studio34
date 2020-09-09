@@ -1,5 +1,88 @@
 @import "../../../styles/helpers/_variables.scss";
 
+/* priority-nav */
+.priority-nav > ul {
+    display: inline-block;
+}
+.priority-nav > ul > li {
+    display: inline-block;
+}
+.priority-nav {
+    white-space: nowrap;
+    flex-grow: 2;
+    text-align: center;
+    flex-shrink: 2;
+}
+.priority-nav > ul > li:not(:last-child) {
+    padding-right: 1.5rem;
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    border: none;
+    vertical-align: middle;
+    padding: 0;
+    background: url(../img/menuTog.png) 50% 50% no-repeat transparent;
+    outline: none;
+    cursor: pointer;
+}
+.priority-nav__wrapper {
+    position: relative;
+}
+.priority-nav__dropdown {
+    position: absolute;
+    visibility: hidden;
+    top: 30px;
+    right: 0;
+    min-width: 180px;
+    list-style: none;
+    background-color: #000000;
+    padding: 15px 20px;
+    text-align: left;
+}
+.priority-nav__dropdown.show {
+    visibility: visible;
+    z-index: 5;
+}
+.is-empty .priority-nav-is-visible, .is-empty .priority-nav__wrapper {
+    position: initial;
+}
+.is-empty .priority-nav__dropdown {
+    top: 70px;
+    width: 100%;
+}
+.priority-nav__dropdown li {
+    &:not(:last-child) {
+        padding-bottom: 5px;
+    }
+}
+.priority-nav__dropdown-toggle {
+    visibility: hidden;
+    position: absolute;
+}
+
+.priority-nav-is-visible {
+    visibility: visible;
+    margin-left: 1.5rem;
+}
+
+.priority-nav-is-hidden {
+    visibility: hidden;
+}
+.is-empty .priority-nav-is-visible {
+    margin-left: 0;
+    width: 30px;
+    height: 26px;
+    background-size: cover;
+}
+.priority-nav.is-empty {
+    text-align: right;
+    padding-right: 5px;
+}
+/* priority-nav */
+
 .header {
     display: flex;
     align-items: center;
@@ -64,101 +147,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
-/* priority-nav */
-.priority-nav {
-    white-space: nowrap;
-    flex-grow: 2;
-    text-align: center;
-    flex-shrink: 2;
-}
-
-.priority-nav > ul {
-    display: inline-block;
-}
-
-.priority-nav > ul > li {
-    display: inline-block;
-    &:last-child {
-        display: none;
-    }
-}
-.priority-nav > ul > li:not(:last-child) {
-    padding-right: 1.5rem;
-}
-
-.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
-    display: inline-block;
-    position: relative;
-    width: 30px;
-    height: 18px;
-    border: none;
-    vertical-align: middle;
-    padding: 0;
-    background: url(../img/menuTog.png) 50% 50% no-repeat transparent;
-    outline: none;
-    cursor: pointer;
-}
-
-.priority-nav__wrapper {
-    position: relative;
-}
-
-.priority-nav__dropdown {
-    position: absolute;
-    visibility: hidden;
-    top: 30px;
-    right: 0;
-    min-width: 180px;
-    list-style: none;
-    background-color: #000000;
-    padding: 15px 20px;
-    text-align: left;
-}
-
-.priority-nav__dropdown.show {
-    visibility: visible;
-    z-index: 5;
-}
-.is-empty .priority-nav-is-visible, .is-empty .priority-nav__wrapper {
-    position: initial;
-}
-.is-empty .priority-nav__dropdown {
-    top: 70px;
-    width: 100%;
-}
-.priority-nav__dropdown li {
-    &:not(:last-child) {
-        padding-bottom: 5px;
-    }
-    &:last-child {
-        display: none;
-    }
-}
-.priority-nav__dropdown-toggle {
-    visibility: hidden;
-    position: absolute;
-}
-
-.priority-nav-is-visible {
-    visibility: visible;
-    margin-left: 1.5rem;
-}
-
-.priority-nav-is-hidden {
-    visibility: hidden;
-}
-.is-empty .priority-nav-is-visible {
-    margin-left: 0;
-    width: 30px;
-    height: 26px;
-    background-size: cover;
-}
-.priority-nav.is-empty {
-    text-align: right;
-    padding-right: 5px;
-}
-/* priority-nav */
 .is-empty + .header__group .personal-area a {
     padding-top: 2px;
     display: block;
@@ -248,11 +236,6 @@
 @media screen and (max-width: 710px) {
     .header__phone {
         display: none;
-    }
-    .priority-nav__dropdown li {
-        &:last-child {
-            display: inline-block;
-        }
     }
 }
 

@@ -312,28 +312,11 @@
         width: 50%;
         height: 50%;
         border-color: rgba(230, 199, 131, 0);
-        transform: rotate(0);
     }
     100% {
         width: 100%;
         height: 100%;
         border-color: rgba(230, 199, 131, 1);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes borderAnimHover {
-    0% {
-        width: 100%;
-        height: 100%;
-        transform: rotate(0);
-        border-color: rgba(230, 199, 131, 1);
-    }
-    100% {
-        width: 100%;
-        height: 100%;
-        transform: rotate(360deg);
-        border-color: rgba(230, 199, 131, 0);
     }
 }
 
@@ -349,16 +332,34 @@
     }
 }
 
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateAnimationHover {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 @keyframes beforeLineHover {
     0% {
         width: 95%;
         opacity: 1;
-        transform: rotate(-45deg);
+        transform: rotate(360deg);
     }
     100% {
         width: 0;
         opacity: 0;
-        transform: rotate(360deg);
+        transform: rotate(-45deg);
     }
 }
 
@@ -398,18 +399,15 @@
         transform: rotate(-45deg);
         opacity: 0;
     }
-    &:hover {
-        animation: 1.8s ease-out forwards borderAnimHover!important;
-        &::before {
-            animation: 1.7s ease-in forwards beforeLineHover!important;
-        }
-    }
 }
 .animation-start .stages-work__item::before {
-    animation: 1.7s ease-in forwards beforeLine;
+    animation: 1.7s linear forwards beforeLine;
 }
 .animation-start .stages-work__item {
-    animation: 1.8s ease-out forwards borderAnim;
+    animation: 1.8s linear forwards borderAnim;
+    .stages-work__item-text {
+        animation: 1.7s linear forwards rotateAnimation;
+    }
 }
 .stages-work .border-hide-anim {
     border-color: rgba(0, 0, 0, 0);
@@ -417,6 +415,19 @@
 .animation-start .border-hide-anim {
     animation: 8s ease forwards borderShow;
 }
+
+/* Hover stage */
+
+.stage-hover-animation {
+    .stages-work__item-text {
+        animation: 1.7s linear forwards rotateAnimationHover!important;
+    }
+    &::before {
+        animation: 1.7s linear forwards beforeLineHover!important;
+    }
+}
+
+/* Hover stage */
 
 @media screen and (max-width: 1460px) {
     .stages-work {

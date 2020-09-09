@@ -1,3 +1,5 @@
+@import "../blocks/modules";
+
 // Подключение SCSS исходников Bootstrap 4
 @import "../../node_modules/bootstrap/scss/_functions";
 @import "../../node_modules/bootstrap/scss/_variables";
@@ -18,4 +20,3 @@
 @import "vendor/libs";
 @import "base/fonts";
 @import "base/general";
-@import "../blocks/modules";
