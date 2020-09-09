@@ -1335,7 +1335,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _type
     // Text that is used for the dropdown toggle.
     navDropdownBreakpointLabel: "",
     //button label for navDropdownToggle when the breakPoint is reached.
-    breakPoint: 500,
+    breakPoint: 710,
     //amount of pixels when all menu items should be moved to dropdown to simulate a mobile menu
     throttleDelay: 50,
     // this will throttle the calculating logic on resize because i'm a responsible dev.
