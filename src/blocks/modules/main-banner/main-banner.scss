@@ -5,13 +5,14 @@
     min-height: 100vh;
     background: #000000;
     overflow: hidden;
+    justify-content: space-between;
     &::before {
         content: "";
         display: block;
         position: absolute;
         z-index: 1;
         width: 100%;
-        height: calc(100vh - 220px);
+        height: calc(100vh - 126px);
         background: url(../img/banner-bg.jpg) no-repeat;
         background-size: cover;
     }
@@ -106,7 +107,6 @@
     z-index: 2;
     width: 100%;
     max-width: 1920px;
-    margin-top: auto;
     margin-right: auto;
     margin-left: auto;
 }
@@ -167,6 +167,12 @@
     }
 }
 
+@media screen and (max-width: 1460px) {
+    .main-banner {
+        min-height: calc(100vh - 99.02px);
+    }
+}
+
 @media screen and (max-width: 1140px) and (min-width: 991px) {
     .animation-letter, .animation-space {
         font-size: 170px;
@@ -183,6 +189,12 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .main-banner {
+        min-height: calc(100vh - 90px);
+    }
+}
+
 @media screen and (max-width: 991px) {
     .main-banner__card__link {
         margin-top: 14px;
@@ -196,6 +208,9 @@
 @media screen and (max-width: 800px) {
     .main-banner__card {
         padding: 0 15px;
+    }
+    .main-banner {
+        min-height: calc(100vh - 74px);
     }
 }
 
@@ -215,11 +230,6 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-    .main-banner__animation {
-        margin-top: 50px;
-    }
-}
 @media screen and (max-width: 650px) {
     .main-banner__card h3 {
         font-size: 26px;

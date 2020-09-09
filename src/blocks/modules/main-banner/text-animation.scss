@@ -57,6 +57,7 @@ $letter-position: (
     }
 }
 
+
 @media screen and (max-width: 1460px) {
     .main-banner__animation-wrap {
         text-align: center;
@@ -105,5 +106,36 @@ $letter-position: (
 @media screen and (max-width: 335px) {
     .animation-letter, .animation-space {
         font-size: 50px;
+    }
+}
+
+@media screen and (max-height: 880px) and (min-width: 1150px) {
+    .animation-letter, .animation-space {
+        font-size: 210px!important;
+        line-height: 200px!important;
+    }
+}
+
+@media screen and (max-height: 800px) and (min-width: 1150px) {
+    .main-banner__desc h3 {
+        font-size: 50px!important;
+        line-height: 54px!important;
+    }
+    .main-banner__btn {
+        margin-top: 30px!important;
+    }
+    .s-btn {
+        font-size: 17px!important;
+        padding: 18px 40px 17px!important;
+    }
+}
+
+@media screen and (max-height: 750px) and (min-width: 1150px) {
+    .animation-letter, .animation-space {
+        font-size: 180px!important;
+        line-height: 180px!important;
+    }
+    .main-banner__animation-wrap {
+        text-align: center!important;
     }
 }
