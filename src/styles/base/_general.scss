@@ -93,6 +93,14 @@ canvas {
   padding-right: 15px;
   padding-left: 15px;
 }
+.s-col-5 {
+  flex: 0 0 20%;
+  max-width: 20%;
+  position: relative;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 15px;
+}
 
 .s-lg-inline-block {
   display: inline-block;
@@ -138,8 +146,8 @@ canvas {
 	content: '';
 	position: absolute;
 	top: calc(100% + 10px);
-	right: 0;
-	left: -5000px;
+	right: -5000px;
+	left: 0;
 	border-bottom: 1px solid #605F6C;
   }
 }
