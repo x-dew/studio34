@@ -1,0 +1,91 @@
+.ideology {
+  background: #000000;
+  padding-bottom: 142px;
+}
+
+.ideology-items {
+  display: flex;
+  margin-bottom: 75px;
+}
+
+.ideology-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  background: url("../../../../img/ideology-img.png") center center no-repeat;
+  min-height: 504px;
+  background-size: contain;
+}
+
+.ideology-items__two {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 542px;
+  margin-bottom: 154px;
+}
+
+.ideology-img__two {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  background: url("../../../../img/ideology-img3.png") left center no-repeat;
+  margin-left: 33px;
+
+
+  img {
+	height: 422px;
+  }
+}
+
+.ideology-img__three {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  background: url("../../../../img/ideology-img5.png") right 0 center no-repeat;
+  background-size: contain;
+}
+
+.ideology-text__three {
+  padding-right: 57px !important;
+}
+
+.ideology-text {
+  padding-right: 134px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #605F6C;
+	margin-bottom: 37px;
+  }
+}
+
+.ideology-text__studio {
+  margin-bottom: 35px;
+
+  p {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 40px;
+	color: #D2B886;
+  }
+}
+
+.ideology-text__studio-desc {
+  p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #ADADBA;
+  }
+}
