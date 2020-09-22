@@ -16,4 +16,8 @@ import "../blocks/modules/footer/footer";
 import './swiper-settings';
 import './particles.min';
 import './priority-nav';
+import './aos-setting';
 import "./my";
+
+//about_company
+import "../blocks/modules/about_company/ideology/ideology";
