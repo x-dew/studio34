@@ -27,6 +27,7 @@
   justify-content: flex-start;
   min-height: 542px;
   margin-bottom: 154px;
+  align-items: center;
 }
 
 .ideology-img__two {
@@ -37,24 +38,17 @@
   background: url("../../../../img/ideology-img3.png") left center no-repeat;
   margin-left: 33px;
   min-height: 542px;
+  background-size: contain;
 
-  img {
-	height: 422px;
-  }
 }
 
-.ideology-img__item-two {
-  width: 100%;
-  height: 100%;
-  background-size: inherit;
-}
 
 .ideology-img__three {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 50%;
-  background: url("../../../../img/ideology-img5.png") right 0 center no-repeat;
+  background: url("../../../../img/ideology-img5.png") center center no-repeat;
   background-size: contain;
   height: 448px;
 
@@ -124,6 +118,14 @@
   }
 }
 
+@media screen and (max-width: 1363px) {
+  .ideology-img__three {
+	img {
+	  width: 100%;
+	}
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .ideology-text {
 	padding-right: 70px !important;
@@ -140,8 +142,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .container-about{
-	padding-left: 15px!important;
+  .container-about {
+	padding-left: 15px !important;
   }
   .ideology-text {
 	padding-right: 15px !important;
@@ -151,7 +153,7 @@
   }
   .ideology-text {
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 45px;
   }
   .ideology-img {
 	width: 100%;
@@ -167,14 +169,32 @@
 	width: 100%;
 	background: url("../../../../img/ideology-img3.png") center center no-repeat;
 	justify-content: center;
+	background-size: contain;
+  }
+  .ideology-img__three img {
+	width: auto;
   }
   .ideology-img__item {
 	background-position: center !important;
   }
   .ideology-img {
 	background-position: center !important;
+	background-size: auto !important;
   }
   .ideology-img__three {
+	justify-content: center !important;
+	width: 100%;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .ideology-img {
+	background-size: contain !important;
+  }
+}
+
+@media screen and (max-width: 683px) {
+  .ideology-img__three img {
 	width: 100%;
   }
 }
@@ -186,6 +206,25 @@
   }
   .ideology {
 	padding-bottom: 100px !important;
+  }
+  .ideology-items__two {
+	margin-bottom: 60px !important;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .ideology-img {
+	img {
+	  width: 100%;
+	}
+  }
+}
+
+@media screen and (max-width: 457px) {
+  .ideology-img__two {
+	img {
+	  width: 100%;
+	}
   }
 }
 
@@ -207,6 +246,15 @@
   }
   .ideology-img__three {
 	height: 280px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ideology-img__two {
+	min-height: 486px !important;
+  }
+  .ideology-items__two {
+	margin-bottom: 40px !important;
   }
 }
 
