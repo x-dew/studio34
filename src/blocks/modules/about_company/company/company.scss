@@ -47,3 +47,30 @@
 	color: #ADADBA;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .company-items {
+	display: block;
+  }
+  .company-title {
+	h2 {
+	  font-size: 55px !important;
+	}
+  }
+
+  .company-items__text {
+	width: 100%;
+	margin-bottom: 20px;
+
+	p {
+	  font-size: 18px !important;
+	  line-height: 30px !important;
+	}
+  }
+  .company-items__text-small {
+	width: 100%;
+	padding-left: 0;
+  }
+
+
+}

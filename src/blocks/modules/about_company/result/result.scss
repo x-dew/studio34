@@ -14,3 +14,19 @@
 	color: #000000;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .result-text p {
+	font-size: 22px !important;
+	line-height: 32px !important;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .result-text p {
+	font-size: 20px !important;
+	line-height: 28px !important;
+  }
+
+}
