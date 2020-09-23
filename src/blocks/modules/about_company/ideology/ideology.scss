@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   width: 50%;
-  background: url("../../../../img/ideology-img.png") center center no-repeat;
+  background: url("../img/ideology-img.png") center center no-repeat;
   min-height: 504px;
   background-size: contain;
 }
@@ -37,7 +37,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 50%;
-  background: url("../../../../img/ideology-img3.png") left center no-repeat;
+  background: url("../img/ideology-img3.png") left center no-repeat;
   margin-left: 33px;
   min-height: 542px;
   background-size: contain;
@@ -50,7 +50,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 50%;
-  background: url("../../../../img/ideology-img5.png") center center no-repeat;
+  background: url("../img/ideology-img5.png") center center no-repeat;
   background-size: contain;
   height: 448px;
   overflow: hidden;
@@ -187,7 +187,7 @@
   }
   .ideology-img__two {
 	width: 100%;
-	background: url("../../../../img/ideology-img3.png") center center no-repeat;
+	background: url("../img/ideology-img3.png") center center no-repeat;
 	justify-content: center;
 	background-size: contain;
   }
