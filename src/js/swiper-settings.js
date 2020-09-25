@@ -32,3 +32,33 @@ new Swiper('.work-examples__slider', {
         }
     }
 });
+
+//Слайдер на страницу новостей
+new Swiper('.news-slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+        nextEl: '.news-slider__next',
+        prevEl: '.news-slider__prev',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            spaceBetween: 25,
+            slidesPerView: 1,
+        },
+        480: {
+            spaceBetween: 25,
+            slidesPerView: 2,
+        },
+        // when window width is >= 441px
+        900: {
+            spaceBetween: 40,
+            slidesPerView: 3
+        },
+    }
+});
+
