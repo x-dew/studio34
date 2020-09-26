@@ -1,6 +1,5 @@
 .heading {
   background: #000000;
-  padding-bottom: 49px;
 }
 
 .heading-title {
@@ -8,9 +7,10 @@
   h2 {
 	font-style: normal;
 	font-weight: 300;
-	font-size: 65px;
-	line-height: 75px;
+	font-size: 50px;
+	line-height: 52px;
 	color: #E6C783;
+	max-width: 783px;
   }
 }
 
@@ -19,31 +19,14 @@
   justify-content: space-between;
 }
 
-.heading-items__text {
-  width: 50%;
+@media screen and (max-width: 767px) {
 
-  p {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 40px;
-	color: #FFFFFF;
+  .heading-title {
+	h2 {
+	  font-size: 35px;
+	  line-height: 40px;
 
-  }
-}
-
-.heading-items__text-small {
-  display: flex;
-  align-items: flex-end;
-  width: 50%;
-  padding-left: 42px;
-
-  p {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 25px;
-	color: #ADADBA;
+	}
   }
 }
 
@@ -53,7 +36,8 @@
   }
   .heading-title {
 	h2 {
-	  font-size: 55px !important;
+	  font-size: 35px !important;
+	  line-height: 30px;
 	}
   }
 
