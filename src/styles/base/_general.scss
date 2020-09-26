@@ -61,7 +61,14 @@ canvas {
   padding-left: 45px;
   padding-right: 15px;
   margin: 0 auto;
+}
 
+.container-news {
+  max-width: 1512px;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .s-full-height {
@@ -174,6 +181,12 @@ canvas {
 	writing-mode: tb-rl;
 	-webkit-transform: rotate(-180deg);
 	transform: rotate(-180deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container-news {
+	padding-left: 15px !important;
   }
 }
 

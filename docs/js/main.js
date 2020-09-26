@@ -2187,13 +2187,13 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-slider', {
       spaceBetween: 25,
       slidesPerView: 1
     },
-    480: {
+    767: {
       spaceBetween: 25,
       slidesPerView: 2
     },
     // when window width is >= 441px
-    900: {
-      spaceBetween: 40,
+    1050: {
+      spaceBetween: 20,
       slidesPerView: 3
     }
   }
