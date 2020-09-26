@@ -4,7 +4,6 @@
 }
 
 .detail-card__line {
-  width: 325px;
   height: 8px;
   background: #746859;
   border: none;
@@ -12,8 +11,9 @@
 }
 
 .detail-text__card {
-  width: 325px;
+  min-width: 325px;
   margin-right: 46px;
+  padding-top: 14px;
 
   p {
 	font-style: normal;
@@ -46,7 +46,9 @@
 	justify-content: center;
   }
 }
-
+.detail-text__networks{
+  margin-top: -9px;
+}
 .color-network {
   display: flex;
   width: 72px;
@@ -60,7 +62,7 @@
 }
 
 .network-not-like {
-  margin-bottom: 11px;
+  margin-bottom: 14px;
 }
 
 .detail__text {
@@ -79,6 +81,12 @@
   .detail-text__desc {
 	margin-top: 30px;
   }
+  .detail-text__networks{
+	margin-top:0!important;
+  }
+.detail-text__card{
+  width: 325px;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -93,12 +101,12 @@
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 500px) {
   .detail-text__card {
-	width: 100%;
+	width: 100%!important;
   }
   .detail-card__line {
-	width: 100%;
+	width: 100%!important;
   }
 }
 

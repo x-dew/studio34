@@ -1,6 +1,6 @@
 .news-cards {
   background: #000000;
-  padding-bottom: 67px;
+  padding-bottom: 72px;
 
 
   img {
@@ -44,6 +44,35 @@
   &:hover .news-card__date {
 	color: #000000;
   }
+}
+
+.news-link__svg-next {
+  display: flex;
+  justify-content: center;
+
+  &:hover .news-link__svg-none {
+	display: block;
+  }
+
+  &:hover svg {
+	display: none;
+  }
+}
+
+.news-link__svg-prev {
+  display: flex;
+  &:hover .news-link__svg-none {
+	display: block;
+
+  }
+
+  &:hover svg {
+	display: none;
+  }
+}
+
+.news-link__svg-none {
+  display: none;
 }
 
 .news-card__date {
@@ -103,7 +132,8 @@ svg {
 
 .news-card__navigation {
   text-align: center;
-
+  display: flex;
+  justify-content: center;
 
   .active {
 	color: #ffffff !important;
@@ -113,7 +143,6 @@ svg {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
-	line-height: 25px;
 	color: rgba(255, 255, 255, 0.34);
 	margin-left: 20px;
   }
