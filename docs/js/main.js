@@ -2198,6 +2198,17 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-slider', {
     }
   }
 });
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.detail-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  centerMode: true,
+  loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 
 /***/ })
 

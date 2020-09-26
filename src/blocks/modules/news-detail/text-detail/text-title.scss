@@ -1,0 +1,46 @@
+.text-detail {
+  background: #000000;
+  padding-bottom: 163px;
+}
+
+.text-detail__card {
+  margin-right: 50px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+
+  p {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 30px;
+	color: #FFFFFF;
+	max-width: 323px;
+  }
+}
+
+.text-detail__desc {
+  p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 33px;
+	color: #ABB2B8;
+	max-width: 897px;
+  }
+}
+
+.text-detail__item {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .text-detail__item {
+	display: block;
+  }
+  .text-detail__card {
+	margin-right: 0;
+	margin-bottom: 30px;
+
+  }
+}

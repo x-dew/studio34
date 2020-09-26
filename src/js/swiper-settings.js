@@ -61,4 +61,14 @@ new Swiper('.news-slider', {
         },
     }
 });
-
+new Swiper('.detail-slider', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    centerMode:true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

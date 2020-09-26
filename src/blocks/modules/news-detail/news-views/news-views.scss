@@ -24,7 +24,7 @@
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 32px;
+  padding-bottom: 25px;
 
   p {
 	font-style: normal;
@@ -53,5 +53,13 @@
 
   .news-views__items {
 	padding-top: 20px;
+  }
+}
+@media screen and (max-width: 450px){
+  .views-time{
+	margin-right: 20px;
+  }
+  .views-news {
+	margin-right: 20px;
   }
 }
