@@ -61,14 +61,17 @@ new Swiper('.news-slider', {
         },
     }
 });
+
 new Swiper('.detail-slider', {
-    slidesPerView: 1,
+    centeredSlides: true,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     slidesPerGroup: 1,
     slidesToShow:3,
     lazy: true,
     centerMode:true,
     loopFillGroupWithBlank: true,
+    loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
