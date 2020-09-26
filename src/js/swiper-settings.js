@@ -62,7 +62,7 @@ new Swiper('.news-slider', {
     }
 });
 new Swiper('.detail-slider', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     slidesPerGroup: 1,
     slidesToShow:3,
