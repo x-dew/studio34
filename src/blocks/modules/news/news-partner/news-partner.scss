@@ -58,9 +58,11 @@
   flex-direction: column;
   justify-content: space-between;
   //margin: 0 7.5px 43px 7.5px;
+  transition: 0.3s;
 
   &:hover {
 	background: #E6C783;
+	transition: 0.3s;
   }
 }
 

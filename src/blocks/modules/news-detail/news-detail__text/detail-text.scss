@@ -47,6 +47,11 @@
 	border-radius: 1px;
 	display: flex;
 	justify-content: center;
+
+	&:hover {
+	  transition: 0.3s;
+	  transform: scale3d(1.1, 1.1, 1.1);
+	}
   }
 }
 
@@ -61,9 +66,15 @@
   background: #746859;
   border-radius: 1px;
   justify-content: center;
-  //&:hover{
-  //background: #E6C783;
-  //}
+
+
+  &:hover {
+	background: #E6C783;
+	transition: 0.3s;
+	transform: scale3d(1.1, 1.1, 1.1);
+	position: relative;
+	z-index: 2;
+  }
 }
 
 .network-not-like {
