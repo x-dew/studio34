@@ -19,7 +19,7 @@
 .news-link__prev {
   display: flex;
   align-items: center;
-flex-grow: 1;
+  flex-grow: 1;
 }
 
 .news-link__next {
@@ -112,8 +112,8 @@ flex-grow: 1;
 	display: block;
 
   }
-  .news-link__img-prev{
-	margin-bottom: 10px!important;
+  .news-link__img-prev {
+	margin-bottom: 10px !important;
   }
   .news-link__next {
 	display: block;

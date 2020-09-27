@@ -76,4 +76,24 @@ new Swiper('.detail-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            spaceBetween: 25,
+            slidesPerView: 1,
+        },
+        767: {
+            spaceBetween: 25,
+            slidesPerView: 1.5,
+        },
+        1025: {
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+        },
+        // when window width is >= 441px
+        1430: {
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+        },
+    }
 });

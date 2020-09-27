@@ -1,11 +1,78 @@
-.detail-slider{
+.detail-slider {
   background: #000000;
   padding-bottom: 81px;
 }
-.slider-detail{
-  max-width: 906px!important;
+
+.slider-detail {
+  max-width: 906px !important;
   opacity: 0.5;
+
+  img {
+	max-width: 100%;
+  }
 }
-.swiper-slide-active{
-opacity: 1;
+
+.swiper-slide-active {
+  opacity: 1;
+
+}
+
+.swiper-detail {
+  padding-left: 124px;
+}
+
+.swiper-detail__button {
+  display: flex;
+}
+
+.detail-swiper__button-prev {
+  position: absolute;
+  left: calc(50% - 378px);
+  top: 50%;
+  z-index: 5;
+
+  &:focus {
+	outline: none;
+  }
+}
+
+.detail-swiper__button-next {
+  position: absolute;
+  right: calc(50% - 627px);
+  top: 50%;
+  z-index: 5;
+
+  &:focus {
+	outline: none;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .swiper-detail {
+	padding-left: 0 !important;
+  }
+  .detail-swiper__button-prev {
+	left: calc(50% - 500px) !important;
+  }
+  .detail-swiper__button-next {
+	right: calc(50% - 500px) !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-detail {
+	padding-left: 0 !important;
+  }
+  .detail-swiper__button-prev {
+	position: static;
+	margin-right: 15px;
+  }
+  .detail-swiper__button-next {
+	position: static;
+  }
+  .swiper-detail__button {
+	justify-content: flex-end;
+	margin-bottom: 10px;
+	padding-right: 15px;
+  }
 }
