@@ -14,7 +14,6 @@
 
 .swiper-slide-active {
   opacity: 1;
-
 }
 
 .swiper-detail {
@@ -23,6 +22,11 @@
 
 .swiper-detail__button {
   display: flex;
+  cursor: pointer;
+
+  &:focus {
+	outline: none;
+  }
 }
 
 .detail-swiper__button-prev {
@@ -72,7 +76,16 @@
   }
   .swiper-detail__button {
 	justify-content: flex-end;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .swiper-detail__button svg {
+	width: 50px;
+  }
+  .news-detail__text {
+	padding-bottom: 80px;
   }
 }
