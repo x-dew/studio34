@@ -6,12 +6,10 @@
 .slider-detail {
   max-width: 906px !important;
   opacity: 0.5;
-  max-height: 309px;
 
   img {
 	width: 100%;
 	max-width: 100%;
-	min-height: 309px;
   }
 }
 
@@ -82,6 +80,12 @@
 	justify-content: flex-end;
 	margin-bottom: 25px;
 	padding-right: 15px;
+  }
+  .slider-detail {
+	img {
+	  width: 100%;
+	  max-width: 100%;
+	}
   }
 }
 
