@@ -49,14 +49,14 @@
   text-align: left;
   opacity: 0;
   z-index: 5;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .priority-nav__dropdown.show {
   visibility: visible;
   opacity: 1;
   padding: 15px 20px;
-  transition: 0.2s;
+  transition: 0.7s;
 }
 
 .is-empty .priority-nav-is-visible, .is-empty .priority-nav__wrapper {
