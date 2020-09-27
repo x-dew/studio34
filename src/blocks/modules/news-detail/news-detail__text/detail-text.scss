@@ -74,6 +74,7 @@
 	transform: scale3d(1.1, 1.1, 1.1);
 	position: relative;
 	z-index: 2;
+	cursor:pointer;
   }
 }
 
@@ -112,10 +113,16 @@
   .detail__network {
 	display: flex;
 	margin-left: 0;
-	justify-content: space-around;
+	justify-content: end;
 	margin-top: 40px;
   }
-
+  .network-not-like {
+	margin-bottom: 0;
+	margin-right: 14px;
+  }
+  .news-detail__text{
+	padding-bottom: 80px!important;
+  }
 }
 
 @media screen and (max-width: 500px) {
