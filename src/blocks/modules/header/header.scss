@@ -40,18 +40,23 @@
 .priority-nav__dropdown {
   position: absolute;
   visibility: hidden;
-  top: 30px;
+  top: 35px;
   right: 0;
   min-width: 180px;
   list-style: none;
   background-color: #000000;
-  padding: 15px 20px;
+  padding: 0 20px;
   text-align: left;
+  opacity: 0;
+  z-index: 5;
+  transition: 0.2s;
 }
 
 .priority-nav__dropdown.show {
   visibility: visible;
-  z-index: 5;
+  opacity: 1;
+  padding: 15px 20px;
+  transition: 0.2s;
 }
 
 .is-empty .priority-nav-is-visible, .is-empty .priority-nav__wrapper {
